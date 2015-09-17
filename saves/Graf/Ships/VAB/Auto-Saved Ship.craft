@@ -1,15 +1,15 @@
-ship = minmus3
+ship = minmus4
 version = 1.0.4
 description = 
 type = VAB
-size = 6.368292,19.22695,11.51744
+size = 5.537056,18.66242,11.51744
 PART
 {
 	part = mk1pod_4294744014
 	partName = Part
-	pos = 0,15,0
+	pos = 5.815742,20.30358,1.819004
 	attPos = 0,0,0
-	attPos0 = 0,15,0
+	attPos0 = 5.815742,20.30358,1.819004
 	rot = 0,0,0,1
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
@@ -24,14 +24,14 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = standardNoseCone_4294740700
-	link = mk1pod_4294743476
 	link = solarPanels5_4294532992
 	link = solarPanels5_4294532876
 	link = telescopicLadder_4294527120
 	link = parachuteRadial_4294005814
 	link = parachuteRadial_4294004454
-	attN = bottom,mk1pod_4294743476
+	link = HeatShield1_4294023274
+	link = standardNoseCone_4294740700
+	attN = bottom,HeatShield1_4294023274
 	attN = top,standardNoseCone_4294740700
 	EVENTS
 	{
@@ -328,9 +328,718 @@ PART
 }
 PART
 {
+	part = solarPanels5_4294532992
+	partName = Part
+	pos = 5.82027,20.54568,1.409472
+	attPos = 0,0,0
+	attPos0 = 0.004527858,0.2421007,-0.4095321
+	rot = 7.192924E-08,0.9832945,0.1820218,-3.885669E-07
+	attRot = 0,0,0,1
+	attRot0 = 7.192924E-08,0.9832945,0.1820218,-3.885669E-07
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = solarPanels5_4294532876
+	srfN = srfAttach,mk1pod_4294744014
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleDeployableSolarPanel
+		isEnabled = True
+		currentRotation = (0, 0, 0, 0)
+		stateString = RETRACTED
+		storedAnimationTime = 0
+		storedAnimationSpeed = 0
+		EVENTS
+		{
+			Extend
+			{
+				active = True
+				guiActive = True
+				guiIcon = Extend Panels
+				guiName = Extend Panels
+				category = Extend Panels
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Retract
+			{
+				active = True
+				guiActive = True
+				guiIcon = Retract Panels
+				guiName = Retract Panels
+				category = Retract Panels
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ExtendPanelsAction
+			{
+				actionGroup = None
+			}
+			ExtendAction
+			{
+				actionGroup = None
+			}
+			RetractAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = solarPanels5_4294532876
+	partName = Part
+	pos = 5.811214,20.54568,2.228536
+	attPos = 0,0,0
+	attPos0 = -0.004527822,0.2421007,0.4095321
+	rot = 0.1820218,-4.31548E-07,-7.988566E-08,-0.9832945
+	attRot = 0,0,0,1
+	attRot0 = 0.1820218,-4.31548E-07,-7.988566E-08,-0.9832945
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = solarPanels5_4294532992
+	srfN = srfAttach,mk1pod_4294744014
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleDeployableSolarPanel
+		isEnabled = True
+		currentRotation = (0, 0, 0, 0)
+		stateString = RETRACTED
+		storedAnimationTime = 0
+		storedAnimationSpeed = 0
+		EVENTS
+		{
+			Extend
+			{
+				active = True
+				guiActive = True
+				guiIcon = Extend Panels
+				guiName = Extend Panels
+				category = Extend Panels
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Retract
+			{
+				active = True
+				guiActive = True
+				guiIcon = Retract Panels
+				guiName = Retract Panels
+				category = Retract Panels
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ExtendPanelsAction
+			{
+				actionGroup = None
+			}
+			ExtendAction
+			{
+				actionGroup = None
+			}
+			RetractAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = telescopicLadder_4294527120
+	partName = Part
+	pos = 5.824082,20.14297,1.25509
+	attPos = 0,0,0
+	attPos0 = 0.00834047,-0.1605997,-0.5639133
+	rot = -0.05631857,0.7048602,0.05631862,-0.7048607
+	attRot = -4.163072E-09,-6.449382E-09,0.1031275,0.9946682
+	attRot0 = -0.1287088,0.695294,0.1287089,-0.6952945
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,mk1pod_4294744014
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = RetractableLadder
+		isEnabled = True
+		StateName = Retracted
+		EVENTS
+		{
+			Extend
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Extend Ladder
+				guiName = Extend Ladder
+				category = Extend Ladder
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Retract
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Retract Ladder
+				guiName = Retract Ladder
+				category = Retract Ladder
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ExtendAction
+			{
+				actionGroup = None
+			}
+			RetractAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = parachuteRadial_4294005814
+	partName = Part
+	pos = 6.235282,20.51957,1.829972
+	attPos = 0,0,0
+	attPos0 = 0.4195404,0.2159939,0.01096813
+	rot = -0.1287089,0.6952941,-0.1287089,-0.6952944
+	attRot = 0,0,0,1
+	attRot0 = -0.1287089,0.6952941,-0.1287089,-0.6952944
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = 0
+	sqor = 0
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = parachuteRadial_4294004454
+	srfN = srfAttach,mk1pod_4294744014
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleParachute
+		isEnabled = True
+		persistentState = STOWED
+		minAirPressureToOpen = 0.04
+		deployAltitude = 1000
+		minAirPressureToOpen_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0.01
+			maxValue = 0.75
+			stepIncrement = 0.01
+		}
+		deployAltitude_UIFlight
+		{
+			controlEnabled = True
+			minValue = 50
+			maxValue = 5000
+			stepIncrement = 50
+		}
+		EVENTS
+		{
+			Deploy
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy Chute
+				guiName = Deploy Chute
+				category = Deploy Chute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			CutParachute
+			{
+				active = True
+				guiActive = True
+				guiIcon = Cut Parachute
+				guiName = Cut Parachute
+				category = Cut Parachute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Repack
+			{
+				active = False
+				guiActive = False
+				guiIcon = Repack Chute
+				guiName = Repack Chute
+				category = Repack Chute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			CutAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = parachuteRadial_4294004454
+	partName = Part
+	pos = 5.396202,20.51957,1.808035
+	attPos = 0,0,0
+	attPos0 = -0.4195404,0.2159939,-0.0109681
+	rot = -0.1287089,-0.6952944,0.1287089,-0.695294
+	attRot = 0,0,0,1
+	attRot0 = -0.1287089,-0.6952944,0.1287089,-0.695294
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 0
+	sidx = 1
+	sqor = 0
+	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = parachuteRadial_4294005814
+	srfN = srfAttach,mk1pod_4294744014
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleParachute
+		isEnabled = True
+		persistentState = STOWED
+		minAirPressureToOpen = 0.04
+		deployAltitude = 1000
+		minAirPressureToOpen_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0.01
+			maxValue = 0.75
+			stepIncrement = 0.01
+		}
+		deployAltitude_UIFlight
+		{
+			controlEnabled = True
+			minValue = 50
+			maxValue = 5000
+			stepIncrement = 50
+		}
+		EVENTS
+		{
+			Deploy
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy Chute
+				guiName = Deploy Chute
+				category = Deploy Chute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			CutParachute
+			{
+				active = True
+				guiActive = True
+				guiIcon = Cut Parachute
+				guiName = Cut Parachute
+				category = Cut Parachute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Repack
+			{
+				active = False
+				guiActive = False
+				guiIcon = Repack Chute
+				guiName = Repack Chute
+				category = Repack Chute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			CutAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = HeatShield1_4294023274
+	partName = Part
+	pos = 5.815742,19.87654,1.819004
+	attPos = 0,0,0
+	attPos0 = 0,-0.4270382,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 1
+	dstg = 1
+	sidx = -1
+	sqor = -1
+	sepI = 0
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = stackDecoupler_4294020724
+	attN = direct,stackDecoupler_4294020724
+	attN = top,mk1pod_4294744014
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		isJettisoned = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAblator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = Ablator
+		amount = 200
+		maxAmount = 200
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = stackDecoupler_4294020724
+	partName = Part
+	pos = 5.815742,19.81149,1.819004
+	attPos = 0,0,0
+	attPos0 = 0,-0.06505203,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 1
+	dstg = 3
+	sidx = 0
+	sqor = 1
+	sepI = 1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = mk1pod_4294743476
+	attN = bottom,mk1pod_4294743476
+	attN = top,HeatShield1_4294023274
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleDecouple
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		ejectionForcePercent_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
 	part = standardNoseCone_4294740700
 	partName = Part
-	pos = 0,15.89238,0
+	pos = 5.815742,21.19595,1.819004
 	attPos = 0,0,0
 	attPos0 = 0,0.8923759,0
 	rot = 0,0,0,1
@@ -372,14 +1081,14 @@ PART
 }
 PART
 {
-	part = mk1pod_4294743476
+	part = longAntenna_4294038598
 	partName = Part
-	pos = 0,13.95259,0
+	pos = 5.792575,21.54492,1.812533
 	attPos = 0,0,0
-	attPos0 = 0,-1.047414,0
-	rot = 0,0,0,1
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
+	attPos0 = -0.02316689,0.3489666,-0.006470366
+	rot = 0.008014525,0.6874377,-0.005824957,-0.7261758
+	attRot = 0.5316319,-0.1381864,0.07648373,-0.8321191
+	attRot0 = 0.3276164,-0.6686679,0.426959,0.5130855
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 0
@@ -387,18 +1096,116 @@ PART
 	sidx = -1
 	sqor = -1
 	sepI = 0
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,standardNoseCone_4294740700
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		status = Locked
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		EVENTS
+		{
+			Toggle
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Toggle
+				guiName = Extend
+				category = Toggle
+				guiActiveUnfocused = True
+				unfocusedRange = 5
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleDataTransmitter
+		isEnabled = True
+		EVENTS
+		{
+			StartTransmission
+			{
+				active = True
+				guiActive = True
+				guiIcon = Transmit Data
+				guiName = Transmit Data
+				category = Transmit Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			StopTransmission
+			{
+				active = False
+				guiActive = True
+				guiIcon = Stop Transmitting
+				guiName = Stop Transmitting
+				category = Stop Transmitting
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = mk1pod_4294743476
+	partName = Part
+	pos = 5.815742,19.03612,1.819004
+	attPos = 0,0,0
+	attPos0 = 0,-0.7753706,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
 	link = telescopicLadder_4294571530
-	link = science.module_4294568744
-	link = batteryPack_4294536738
-	link = batteryPack_4294536304
 	link = parachuteRadial_4294003740
 	link = parachuteRadial_4294003518
+	link = batteryPack_4294536304
+	link = batteryPack_4292364430
+	link = sensorAccelerometer_4292351174
+	link = GooExperiment_4294543520
+	link = science.module_4294568744
 	attN = bottom,science.module_4294568744
-	attN = top,mk1pod_4294744014
+	attN = top,stackDecoupler_4294020724
 	EVENTS
 	{
 	}
@@ -696,7 +1503,7 @@ PART
 {
 	part = telescopicLadder_4294571530
 	partName = Part
-	pos = -0.01378055,13.75599,-0.5777114
+	pos = 5.801961,18.83952,1.241292
 	attPos = 0,0,0
 	attPos0 = -0.01378055,-0.1965914,-0.5777114
 	rot = -0.0299446,0.7064722,0.02994464,-0.7064728
@@ -704,11 +1511,11 @@ PART
 	attRot0 = -0.1287088,0.695294,0.1287089,-0.6952945
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 0
-	dstg = 0
+	istg = 4
+	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 1
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -774,31 +1581,561 @@ PART
 }
 PART
 {
-	part = science.module_4294568744
+	part = parachuteRadial_4294003740
 	partName = Part
-	pos = 0,12.93505,0
+	pos = 6.296577,19.09223,1.821624
 	attPos = 0,0,0
-	attPos0 = 0,-1.017538,0
-	rot = 0,0,0,1
+	attPos0 = 0.4808349,0.05610847,0.002620206
+	rot = -0.1287089,0.6952941,-0.1287089,-0.6952944
 	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
+	attRot0 = -0.1287089,0.6952941,-0.1287089,-0.6952944
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 0
+	dstg = 3
+	sidx = 2
+	sqor = 0
+	sepI = 1
+	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = GooExperiment_4294543520
-	link = sensorBarometer_4294542908
-	link = sensorThermometer_4294542260
-	link = HeatShield1_4294023274
-	attN = top,mk1pod_4294743476
-	attN = bottom,HeatShield1_4294023274
+	sym = parachuteRadial_4294003518
+	srfN = srfAttach,mk1pod_4294743476
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleParachute
+		isEnabled = True
+		persistentState = STOWED
+		minAirPressureToOpen = 0.04
+		deployAltitude = 1000
+		minAirPressureToOpen_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0.01
+			maxValue = 0.75
+			stepIncrement = 0.01
+		}
+		deployAltitude_UIFlight
+		{
+			controlEnabled = True
+			minValue = 50
+			maxValue = 5000
+			stepIncrement = 50
+		}
+		EVENTS
+		{
+			Deploy
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy Chute
+				guiName = Deploy Chute
+				category = Deploy Chute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			CutParachute
+			{
+				active = True
+				guiActive = True
+				guiIcon = Cut Parachute
+				guiName = Cut Parachute
+				category = Cut Parachute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Repack
+			{
+				active = False
+				guiActive = False
+				guiIcon = Repack Chute
+				guiName = Repack Chute
+				category = Repack Chute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			CutAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = parachuteRadial_4294003518
+	partName = Part
+	pos = 5.334907,19.09223,1.816383
+	attPos = 0,0,0
+	attPos0 = -0.4808349,0.05610847,-0.002620164
+	rot = -0.1287089,-0.6952944,0.1287089,-0.695294
+	attRot = 0,0,0,1
+	attRot0 = -0.1287089,-0.6952944,0.1287089,-0.695294
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 0
+	dstg = 3
+	sidx = 3
+	sqor = 0
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = parachuteRadial_4294003740
+	srfN = srfAttach,mk1pod_4294743476
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleParachute
+		isEnabled = True
+		persistentState = STOWED
+		minAirPressureToOpen = 0.04
+		deployAltitude = 1000
+		minAirPressureToOpen_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0.01
+			maxValue = 0.75
+			stepIncrement = 0.01
+		}
+		deployAltitude_UIFlight
+		{
+			controlEnabled = True
+			minValue = 50
+			maxValue = 5000
+			stepIncrement = 50
+		}
+		EVENTS
+		{
+			Deploy
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy Chute
+				guiName = Deploy Chute
+				category = Deploy Chute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			CutParachute
+			{
+				active = True
+				guiActive = True
+				guiIcon = Cut Parachute
+				guiName = Cut Parachute
+				category = Cut Parachute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Repack
+			{
+				active = False
+				guiActive = False
+				guiIcon = Repack Chute
+				guiName = Repack Chute
+				category = Repack Chute
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			CutAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDragModifier
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = batteryPack_4294536304
+	partName = Part
+	pos = 5.76462,19.3769,1.447304
+	attPos = 0,0,0
+	attPos0 = -0.05112173,0.3407869,-0.3716993
+	rot = -0.1820218,-3.885669E-07,7.192924E-08,-0.9832945
+	attRot = 0,0,0,1
+	attRot0 = -0.1820218,-3.885669E-07,7.192924E-08,-0.9832945
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = batteryPack_4292364430
+	srfN = srfAttach,mk1pod_4294743476
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 100
+		maxAmount = 100
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = batteryPack_4292364430
+	partName = Part
+	pos = 5.866864,19.3769,2.190703
+	attPos = 0,0,0
+	attPos0 = 0.05112177,0.3407869,0.3716993
+	rot = 7.988566E-08,-0.9832945,0.1820218,4.31548E-07
+	attRot = 0,0,0,1
+	attRot0 = 7.988566E-08,-0.9832945,0.1820218,4.31548E-07
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = batteryPack_4294536304
+	srfN = srfAttach,mk1pod_4294743476
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 100
+		maxAmount = 100
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = sensorAccelerometer_4292351174
+	partName = Part
+	pos = 6.239429,18.78945,1.37437
+	attPos = 0,0,0
+	attPos0 = 0.4236872,-0.246665,-0.444634
+	rot = -0.1758195,0.254495,-0.04711064,-0.9497896
+	attRot = 0,0,0,1
+	attRot0 = -0.1758195,0.254495,-0.04711064,-0.9497896
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,mk1pod_4294743476
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnviroSensor
+		isEnabled = True
+		sensorActive = False
+		EVENTS
+		{
+			Toggle
+			{
+				active = True
+				guiActive = True
+				guiIcon = Toggle Display
+				guiName = Toggle Display
+				category = Toggle Display
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceExperiment
+		isEnabled = True
+		Deployed = False
+		Inoperable = False
+		EVENTS
+		{
+			DeployExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CollectDataExternalEvent
+			{
+				active = True
+				guiActive = False
+				guiIcon = 
+				guiName = 
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = True
+				guiActive = True
+				guiIcon = Review Data
+				guiName = Review Data
+				category = Review Data
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DeployExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CleanUpExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Restore
+				guiName = Restore
+				category = Restore
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DeployAction
+			{
+				actionGroup = None
+			}
+			ResetAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = GooExperiment_4294543520
+	partName = Part
+	pos = 5.432224,18.79372,1.485509
+	attPos = 0,0,0
+	attPos0 = -0.383518,-0.2423944,-0.3334948
+	rot = -0.1576354,-0.4916475,0.09101093,-0.8515579
+	attRot = 0,0,0,1
+	attRot0 = -0.1576354,-0.4916475,0.09101093,-0.8515579
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 4
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,mk1pod_4294743476
 	EVENTS
 	{
 	}
@@ -940,26 +2277,31 @@ PART
 }
 PART
 {
-	part = GooExperiment_4294543520
+	part = science.module_4294568744
 	partName = Part
-	pos = 0.3672623,13.00767,-0.3988836
+	pos = 5.815742,18.01858,1.819004
 	attPos = 0,0,0
-	attPos0 = 0.3672623,0.07262421,-0.3988836
-	rot = 2.243556E-08,0.2588188,6.011585E-09,-0.9659259
+	attPos0 = 0,-1.017538,0
+	rot = 0,0,0,1
 	attRot = 0,0,0,1
-	attRot0 = 2.243556E-08,0.2588188,6.011584E-09,-0.9659259
+	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 1
-	dstg = 1
+	istg = 4
+	dstg = 4
 	sidx = -1
 	sqor = -1
-	sepI = 0
-	attm = 1
+	sepI = 1
+	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,science.module_4294568744
+	link = sensorBarometer_4294542908
+	link = sensorThermometer_4294542260
+	link = sensorAtmosphere_4292337750
+	link = stackDecoupler_4292278460
+	attN = top,mk1pod_4294743476
+	attN = bottom,stackDecoupler_4292278460
 	EVENTS
 	{
 	}
@@ -1103,7 +2445,7 @@ PART
 {
 	part = sensorBarometer_4294542908
 	partName = Part
-	pos = -0.401638,13.12834,-0.4829598
+	pos = 5.414104,18.21187,1.336044
 	attPos = 0,0,0
 	attPos0 = -0.401638,0.1932898,-0.4829598
 	rot = -2.869402E-08,-0.2588191,7.688543E-09,-0.9659258
@@ -1111,11 +2453,11 @@ PART
 	attRot0 = -2.869402E-08,-0.2588191,7.688543E-09,-0.9659258
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 1
-	dstg = 1
+	istg = 5
+	dstg = 5
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 1
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -1260,7 +2602,7 @@ PART
 {
 	part = sensorThermometer_4294542260
 	partName = Part
-	pos = -0.4520225,12.75646,-0.4538704
+	pos = 5.363719,17.83999,1.365133
 	attPos = 0,0,0
 	attPos0 = -0.4520225,-0.1785889,-0.4538704
 	rot = -2.869402E-08,-0.2588191,7.688543E-09,-0.9659258
@@ -1268,11 +2610,11 @@ PART
 	attRot0 = -2.869402E-08,-0.2588191,7.688543E-09,-0.9659258
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 1
-	dstg = 1
+	istg = 5
+	dstg = 5
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 1
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -1415,113 +2757,26 @@ PART
 }
 PART
 {
-	part = batteryPack_4294536738
+	part = sensorAtmosphere_4292337750
 	partName = Part
-	pos = 0.3658743,14.30857,-0.03259599
+	pos = 6.278069,18.11186,1.381628
 	attPos = 0,0,0
-	attPos0 = 0.3658743,0.3559809,-0.03259599
-	rot = -0.1287089,0.6952941,-0.1287089,-0.6952944
+	attPos0 = 0.4623266,0.09327984,-0.4373757
+	rot = 3.425428E-08,0.5,1.977672E-08,-0.8660254
 	attRot = 0,0,0,1
-	attRot0 = -0.1287089,0.6952941,-0.1287089,-0.6952944
+	attRot0 = 3.425428E-08,0.5,1.977672E-08,-0.8660254
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 0
-	dstg = 0
+	istg = 5
+	dstg = 5
 	sidx = -1
 	sqor = -1
-	sepI = 0
+	sepI = 1
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = batteryPack_4294536304
-	srfN = srfAttach,mk1pod_4294743476
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 100
-		maxAmount = 100
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = batteryPack_4294536304
-	partName = Part
-	pos = -0.3658743,14.30857,0.03259603
-	attPos = 0,0,0
-	attPos0 = -0.3658743,0.3559809,0.03259603
-	rot = -0.1287089,-0.6952944,0.1287089,-0.695294
-	attRot = 0,0,0,1
-	attRot0 = -0.1287089,-0.6952944,0.1287089,-0.695294
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = batteryPack_4294536738
-	srfN = srfAttach,mk1pod_4294743476
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 100
-		maxAmount = 100
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = solarPanels5_4294532992
-	partName = Part
-	pos = 0.004527858,15.2421,-0.4095321
-	attPos = 0,0,0
-	attPos0 = 0.004527858,0.2421007,-0.4095321
-	rot = 7.192924E-08,0.9832945,0.1820218,-3.885669E-07
-	attRot = 0,0,0,1
-	attRot0 = 7.192924E-08,0.9832945,0.1820218,-3.885669E-07
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = solarPanels5_4294532876
-	srfN = srfAttach,mk1pod_4294744014
+	srfN = srfAttach,science.module_4294568744
 	EVENTS
 	{
 	}
@@ -1533,409 +2788,118 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleDeployableSolarPanel
+		name = ModuleScienceExperiment
 		isEnabled = True
-		currentRotation = (0, 0, 0, 0)
-		stateString = RETRACTED
-		storedAnimationTime = 0
-		storedAnimationSpeed = 0
+		Deployed = False
+		Inoperable = False
 		EVENTS
 		{
-			Extend
+			DeployExperiment
 			{
 				active = True
 				guiActive = True
-				guiIcon = Extend Panels
-				guiName = Extend Panels
-				category = Extend Panels
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-			Retract
-			{
-				active = True
-				guiActive = True
-				guiIcon = Retract Panels
-				guiName = Retract Panels
-				category = Retract Panels
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ExtendPanelsAction
-			{
-				actionGroup = None
-			}
-			ExtendAction
-			{
-				actionGroup = None
-			}
-			RetractAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	part = solarPanels5_4294532876
-	partName = Part
-	pos = -0.004527822,15.2421,0.4095321
-	attPos = 0,0,0
-	attPos0 = -0.004527822,0.2421007,0.4095321
-	rot = 0.1820218,-4.31548E-07,-7.988566E-08,-0.9832945
-	attRot = 0,0,0,1
-	attRot0 = 0.1820218,-4.31548E-07,-7.988566E-08,-0.9832945
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = solarPanels5_4294532992
-	srfN = srfAttach,mk1pod_4294744014
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleDeployableSolarPanel
-		isEnabled = True
-		currentRotation = (0, 0, 0, 0)
-		stateString = RETRACTED
-		storedAnimationTime = 0
-		storedAnimationSpeed = 0
-		EVENTS
-		{
-			Extend
-			{
-				active = True
-				guiActive = True
-				guiIcon = Extend Panels
-				guiName = Extend Panels
-				category = Extend Panels
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-			Retract
-			{
-				active = True
-				guiActive = True
-				guiIcon = Retract Panels
-				guiName = Retract Panels
-				category = Retract Panels
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ExtendPanelsAction
-			{
-				actionGroup = None
-			}
-			ExtendAction
-			{
-				actionGroup = None
-			}
-			RetractAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	part = telescopicLadder_4294527120
-	partName = Part
-	pos = 0.00834047,14.8394,-0.5639133
-	attPos = 0,0,0
-	attPos0 = 0.00834047,-0.1605997,-0.5639133
-	rot = -0.05631857,0.7048602,0.05631862,-0.7048607
-	attRot = -4.163072E-09,-6.449382E-09,0.1031275,0.9946682
-	attRot0 = -0.1287088,0.695294,0.1287089,-0.6952945
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,mk1pod_4294744014
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = RetractableLadder
-		isEnabled = True
-		StateName = Retracted
-		EVENTS
-		{
-			Extend
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Extend Ladder
-				guiName = Extend Ladder
-				category = Extend Ladder
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-			Retract
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Retract Ladder
-				guiName = Retract Ladder
-				category = Retract Ladder
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-			ExtendAction
-			{
-				actionGroup = None
-			}
-			RetractAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	part = longAntenna_4294038598
-	partName = Part
-	pos = -0.02316689,16.24135,-0.006470366
-	attPos = 0,0,0
-	attPos0 = -0.02316689,0.3489666,-0.006470366
-	rot = 0.008014525,0.6874377,-0.005824957,-0.7261758
-	attRot = 0.5316319,-0.1381864,0.07648373,-0.8321191
-	attRot0 = 0.3276164,-0.6686679,0.426959,0.5130855
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,standardNoseCone_4294740700
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		status = Locked
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		EVENTS
-		{
-			Toggle
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Toggle
-				guiName = Extend
-				category = Toggle
-				guiActiveUnfocused = True
-				unfocusedRange = 5
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleDataTransmitter
-		isEnabled = True
-		EVENTS
-		{
-			StartTransmission
-			{
-				active = True
-				guiActive = True
-				guiIcon = Transmit Data
-				guiName = Transmit Data
-				category = Transmit Data
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
 				guiActiveUnfocused = False
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-			StopTransmission
+			CollectDataExternalEvent
 			{
-				active = False
+				active = True
+				guiActive = False
+				guiIcon = 
+				guiName = 
+				category = 
+				guiActiveUnfocused = True
+				unfocusedRange = 1.5
+				externalToEVAOnly = True
+			}
+			ReviewDataEvent
+			{
+				active = True
 				guiActive = True
-				guiIcon = Stop Transmitting
-				guiName = Stop Transmitting
-				category = Stop Transmitting
+				guiIcon = Review Data
+				guiName = Review Data
+				category = Review Data
 				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperiment
+			{
+				active = True
+				guiActive = True
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			DeployExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Deploy
+				guiName = Deploy
+				category = Deploy
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			ResetExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Reset
+				guiName = Reset
+				category = Reset
+				guiActiveUnfocused = True
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			CleanUpExperimentExternal
+			{
+				active = True
+				guiActive = False
+				guiIcon = Restore
+				guiName = Restore
+				category = Restore
+				guiActiveUnfocused = True
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
 		}
 		ACTIONS
 		{
-		}
-	}
-}
-PART
-{
-	part = HeatShield1_4294023274
-	partName = Part
-	pos = 0,12.40055,0
-	attPos = 0,0,0
-	attPos0 = 0,-0.5345001,0
-	rot = 0,0,0,1
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 2
-	dstg = 2
-	sidx = -1
-	sqor = -1
-	sepI = 0
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = stackDecoupler_4294020724
-	attN = direct,stackDecoupler_4294020724
-	attN = top,science.module_4294568744
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleJettison
-		isEnabled = True
-		isJettisoned = True
-		EVENTS
-		{
-			Jettison
+			DeployAction
 			{
-				active = False
-				guiActive = True
-				guiIcon = Jettison
-				guiName = Jettison
-				category = Jettison
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
+				actionGroup = None
 			}
-		}
-		ACTIONS
-		{
-			JettisonAction
+			ResetAction
 			{
 				actionGroup = None
 			}
 		}
 	}
-	MODULE
-	{
-		name = ModuleAblator
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = Ablator
-		amount = 200
-		maxAmount = 200
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
 }
 PART
 {
-	part = stackDecoupler_4294020724
+	part = stackDecoupler_4292278460
 	partName = Part
-	pos = 0,12.3355,0
+	pos = 5.815742,17.44103,1.819004
 	attPos = 0,0,0
-	attPos0 = 0,-0.06505203,0
+	attPos0 = 0,-0.5775518,0
 	rot = 0,0,0,1
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 1
-	dstg = 4
-	sidx = 0
+	dstg = 6
+	sidx = 1
 	sqor = 1
 	sepI = 1
 	attm = 0
@@ -1944,7 +2908,7 @@ PART
 	modSize = (0.0, 0.0, 0.0)
 	link = fuelTank2-2_4294556408
 	attN = bottom,fuelTank2-2_4294556408
-	attN = top,HeatShield1_4294023274
+	attN = top,science.module_4294568744
 	EVENTS
 	{
 	}
@@ -2016,16 +2980,16 @@ PART
 {
 	part = fuelTank2-2_4294556408
 	partName = Part
-	pos = 0,11.265,0
+	pos = 5.815742,16.37053,1.819004
 	attPos = 0,0,0
-	attPos0 = 0,-1.070495,0
+	attPos0 = 0,-1.070496,0
 	rot = 0,0,0,1
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 5
-	dstg = 5
+	istg = 7
+	dstg = 7
 	sidx = -1
 	sqor = -1
 	sepI = 1
@@ -2033,14 +2997,18 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = liquidEngine2-2_4294553352
 	link = telescopicLadder_4294546446
 	link = telescopicLadder_4294545722
 	link = spotLight2_4293983030
 	link = spotLight2_4293981456
 	link = spotLight2_4293981420
 	link = spotLight2_4293981384
-	attN = top,stackDecoupler_4294020724
+	link = liquidEngine2-2_4294553352
+	link = landingLeg1_4292185496
+	link = landingLeg1_4292184590
+	link = landingLeg1_4292184490
+	link = landingLeg1_4292184390
+	attN = top,stackDecoupler_4292278460
 	attN = bottom,liquidEngine2-2_4294553352
 	EVENTS
 	{
@@ -2074,9 +3042,597 @@ PART
 }
 PART
 {
+	part = telescopicLadder_4294546446
+	partName = Part
+	pos = 5.811561,17.16004,0.6115975
+	attPos = 0,0,0
+	attPos0 = -0.004181238,0.7895107,-1.207406
+	rot = -7.797169E-07,0.7071068,7.797169E-07,-0.7071068
+	attRot = 0,0,0,1
+	attRot0 = -7.797169E-07,0.7071068,7.797169E-07,-0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,fuelTank2-2_4294556408
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = RetractableLadder
+		isEnabled = True
+		StateName = Retracted
+		EVENTS
+		{
+			Extend
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Extend Ladder
+				guiName = Extend Ladder
+				category = Extend Ladder
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Retract
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Retract Ladder
+				guiName = Retract Ladder
+				category = Retract Ladder
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ExtendAction
+			{
+				actionGroup = None
+			}
+			RetractAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = telescopicLadder_4294545722
+	partName = Part
+	pos = 5.837168,15.67779,0.6115947
+	attPos = 0,0,0
+	attPos0 = 0.0214264,-0.6927414,-1.207409
+	rot = -7.797169E-07,0.7071068,7.797169E-07,-0.7071068
+	attRot = 0,0,0,1
+	attRot0 = -7.797169E-07,0.7071068,7.797169E-07,-0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	srfN = srfAttach,fuelTank2-2_4294556408
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = RetractableLadder
+		isEnabled = True
+		StateName = Retracted
+		EVENTS
+		{
+			Extend
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Extend Ladder
+				guiName = Extend Ladder
+				category = Extend Ladder
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			Retract
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Retract Ladder
+				guiName = Retract Ladder
+				category = Retract Ladder
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			ExtendAction
+			{
+				actionGroup = None
+			}
+			RetractAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = spotLight2_4293983030
+	partName = Part
+	pos = 5.844327,15.88193,3.29566
+	attPos = 0,0,0
+	attPos0 = 0.02858504,-0.4886065,1.476657
+	rot = 0,1,1.043081E-06,0
+	attRot = 0,0,0,1
+	attRot0 = 0,1,1.043081E-06,0
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = spotLight2_4293981456
+	sym = spotLight2_4293981420
+	sym = spotLight2_4293981384
+	srfN = srfAttach,fuelTank2-2_4294556408
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = spotLight2_4293981456
+	partName = Part
+	pos = 7.292399,15.88193,1.790419
+	attPos = 0,0,0
+	attPos0 = 1.476657,-0.4886065,-0.02858495
+	rot = 7.375699E-07,0.7071068,7.375699E-07,-0.7071068
+	attRot = 0,0,0,1
+	attRot0 = 7.375699E-07,0.7071068,7.375699E-07,-0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = spotLight2_4293983030
+	sym = spotLight2_4293981420
+	sym = spotLight2_4293981384
+	srfN = srfAttach,fuelTank2-2_4294556408
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = spotLight2_4293981420
+	partName = Part
+	pos = 5.787157,15.88193,0.3423464
+	attPos = 0,0,0
+	attPos0 = -0.02858517,-0.4886065,-1.476657
+	rot = 1.043081E-06,-4.371139E-08,-4.559453E-14,-1
+	attRot = 0,0,0,1
+	attRot0 = 1.043081E-06,-4.371139E-08,-4.559453E-14,-1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = spotLight2_4293983030
+	sym = spotLight2_4293981456
+	sym = spotLight2_4293981384
+	srfN = srfAttach,fuelTank2-2_4294556408
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = spotLight2_4293981384
+	partName = Part
+	pos = 4.339085,15.88193,1.847589
+	attPos = 0,0,0
+	attPos0 = -1.476657,-0.4886065,0.02858512
+	rot = 7.375699E-07,-0.7071068,-7.375699E-07,-0.7071068
+	attRot = 0,0,0,1
+	attRot0 = 7.375699E-07,-0.7071068,-7.375699E-07,-0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = spotLight2_4293983030
+	sym = spotLight2_4293981456
+	sym = spotLight2_4293981420
+	srfN = srfAttach,fuelTank2-2_4294556408
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLight
+		isEnabled = True
+		isOn = False
+		lightR = 1
+		lightG = 1
+		lightB = 1
+		lightR_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightG_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		lightB_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 1
+			stepIncrement = 0.05
+		}
+		EVENTS
+		{
+			LightsOff
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights Off
+				guiName = Lights Off
+				category = Lights Off
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			LightsOn
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lights On
+				guiName = Lights On
+				category = Lights On
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleLightAction
+			{
+				actionGroup = Light
+			}
+			LightOnAction
+			{
+				actionGroup = None
+			}
+			LightOffAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
 	part = liquidEngine2-2_4294553352
 	partName = Part
-	pos = 0,9.600561,0
+	pos = 5.815742,14.70609,1.819004
 	attPos = 0,0,0
 	attPos0 = 0,-1.66444,0
 	rot = 0,0,0,1
@@ -2085,7 +3641,7 @@ PART
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 2
-	dstg = 5
+	dstg = 7
 	sidx = 0
 	sqor = 2
 	sepI = 1
@@ -2093,9 +3649,9 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = stackDecoupler_4294706104
+	link = stackDecoupler_4292264498
 	attN = top,fuelTank2-2_4294556408
-	attN = bottom,stackDecoupler_4294706104
+	attN = bottom,stackDecoupler_4292264498
 	EVENTS
 	{
 	}
@@ -2295,9 +3851,9 @@ PART
 }
 PART
 {
-	part = stackDecoupler_4294706104
+	part = stackDecoupler_4292264498
 	partName = Part
-	pos = 0,8.800074,0
+	pos = 5.815742,13.9056,1.819004
 	attPos = 0,0,0
 	attPos0 = 0,-0.8004875,0
 	rot = 0,0,0,1
@@ -2306,7 +3862,7 @@ PART
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 3
-	dstg = 6
+	dstg = 8
 	sidx = 0
 	sqor = 3
 	sepI = 3
@@ -2314,8 +3870,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = fuelTank1-2_4294702942
-	attN = bottom,fuelTank1-2_4294702942
+	link = fuelTank3-2_4292289202
+	attN = bottom,fuelTank3-2_4292289202
 	attN = top,liquidEngine2-2_4294553352
 	EVENTS
 	{
@@ -2386,18 +3942,534 @@ PART
 }
 PART
 {
-	part = fuelTank1-2_4294702942
+	part = landingLeg1_4292185496
 	partName = Part
-	pos = 0,6.792079,0
+	pos = 4.802688,14.95089,0.8833427
+	attPos = -2.026109,-0.9414368,-1.871322
+	attPos0 = 1.013055,-0.4782066,0.9356608
+	rot = 1.349852E-07,0.2588196,-5.037704E-07,-0.9659257
+	attRot = 0,0,0,1
+	attRot0 = 5.037705E-07,0.9659258,1.349852E-07,0.2588196
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = landingLeg1_4292184590
+	sym = landingLeg1_4292184490
+	sym = landingLeg1_4292184390
+	srfN = srfAttach,fuelTank2-2_4294556408
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingLeg
+		isEnabled = True
+		StartDeployed = False
+		savedAnimationTime = 0
+		savedAnimationSpeed = 0
+		savedLegState = 0
+		savedLocalPosition = (0, 0, 0)
+		suspensionLocked = False
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			LowerLeg
+			{
+				active = True
+				guiActive = True
+				guiIcon = Lower Legs
+				guiName = Lower Legs
+				category = Lower Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RaiseLeg
+			{
+				active = False
+				guiActive = True
+				guiIcon = Raise Legs
+				guiName = Raise Legs
+				category = Raise Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RepairLeg
+			{
+				active = True
+				guiActive = False
+				guiIcon = Repair Leg
+				guiName = Repair Leg
+				category = Repair Leg
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			LockSuspension
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Suspension
+				guiName = Lock Suspension
+				category = Lock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			UnLockSuspension
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = UnLock Suspension
+				guiName = UnLock Suspension
+				category = UnLock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			ToggleSuspensionLockAction
+			{
+				actionGroup = None
+			}
+			RaiseAction
+			{
+				actionGroup = None
+			}
+			LowerAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = landingLeg1_4292184590
+	partName = Part
+	pos = 6.751403,14.95089,0.805949
+	attPos = 0,-0.9414368,0
+	attPos0 = 0.9356608,-0.4782066,-1.013055
+	rot = 4.516685E-07,0.8660257,-2.607705E-07,-0.4999996
+	attRot = 0,0,0,1
+	attRot0 = 4.516685E-07,0.8660257,-2.607705E-07,-0.4999996
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = landingLeg1_4292185496
+	sym = landingLeg1_4292184490
+	sym = landingLeg1_4292184390
+	srfN = srfAttach,fuelTank2-2_4294556408
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingLeg
+		isEnabled = True
+		StartDeployed = False
+		savedAnimationTime = 0
+		savedAnimationSpeed = 0
+		savedLegState = 0
+		savedLocalPosition = (0, 0, 0)
+		suspensionLocked = False
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			LowerLeg
+			{
+				active = True
+				guiActive = True
+				guiIcon = Lower Legs
+				guiName = Lower Legs
+				category = Lower Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RaiseLeg
+			{
+				active = False
+				guiActive = True
+				guiIcon = Raise Legs
+				guiName = Raise Legs
+				category = Raise Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RepairLeg
+			{
+				active = True
+				guiActive = False
+				guiIcon = Repair Leg
+				guiName = Repair Leg
+				category = Repair Leg
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			LockSuspension
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Suspension
+				guiName = Lock Suspension
+				category = Lock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			UnLockSuspension
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = UnLock Suspension
+				guiName = UnLock Suspension
+				category = UnLock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			ToggleSuspensionLockAction
+			{
+				actionGroup = None
+			}
+			RaiseAction
+			{
+				actionGroup = None
+			}
+			LowerAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = landingLeg1_4292184490
+	partName = Part
+	pos = 4.880081,14.95089,2.832058
+	attPos = 0.07739401,-0.9414368,1.948716
+	attPos0 = -1.013055,-0.4782066,-0.9356608
+	rot = -2.607705E-07,-0.4999995,-4.516684E-07,-0.8660257
+	attRot = 0,0,0,1
+	attRot0 = 1.349852E-07,0.2588196,-5.037705E-07,-0.9659258
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = landingLeg1_4292185496
+	sym = landingLeg1_4292184590
+	sym = landingLeg1_4292184390
+	srfN = srfAttach,fuelTank2-2_4294556408
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingLeg
+		isEnabled = True
+		StartDeployed = False
+		savedAnimationTime = 0
+		savedAnimationSpeed = 0
+		savedLegState = 0
+		savedLocalPosition = (0, 0, 0)
+		suspensionLocked = False
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			LowerLeg
+			{
+				active = True
+				guiActive = True
+				guiIcon = Lower Legs
+				guiName = Lower Legs
+				category = Lower Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RaiseLeg
+			{
+				active = False
+				guiActive = True
+				guiIcon = Raise Legs
+				guiName = Raise Legs
+				category = Raise Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RepairLeg
+			{
+				active = True
+				guiActive = False
+				guiIcon = Repair Leg
+				guiName = Repair Leg
+				category = Repair Leg
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			LockSuspension
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Suspension
+				guiName = Lock Suspension
+				category = Lock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			UnLockSuspension
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = UnLock Suspension
+				guiName = UnLock Suspension
+				category = UnLock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			ToggleSuspensionLockAction
+			{
+				actionGroup = None
+			}
+			RaiseAction
+			{
+				actionGroup = None
+			}
+			LowerAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = landingLeg1_4292184390
+	partName = Part
+	pos = 6.828797,14.95089,2.754664
+	attPos = 1.948716,-0.9414368,-0.07739401
+	attPos0 = -0.9356608,-0.4782066,1.013055
+	rot = -5.037704E-07,-0.9659257,-1.349852E-07,-0.2588196
+	attRot = 0,0,0,1
+	attRot0 = -2.607705E-07,-0.4999996,-4.516685E-07,-0.8660257
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	sepI = 1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = landingLeg1_4292185496
+	sym = landingLeg1_4292184590
+	sym = landingLeg1_4292184490
+	srfN = srfAttach,fuelTank2-2_4294556408
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleLandingLeg
+		isEnabled = True
+		StartDeployed = False
+		savedAnimationTime = 0
+		savedAnimationSpeed = 0
+		savedLegState = 0
+		savedLocalPosition = (0, 0, 0)
+		suspensionLocked = False
+		StartDeployed_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+			LowerLeg
+			{
+				active = True
+				guiActive = True
+				guiIcon = Lower Legs
+				guiName = Lower Legs
+				category = Lower Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RaiseLeg
+			{
+				active = False
+				guiActive = True
+				guiIcon = Raise Legs
+				guiName = Raise Legs
+				category = Raise Legs
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			RepairLeg
+			{
+				active = True
+				guiActive = False
+				guiIcon = Repair Leg
+				guiName = Repair Leg
+				category = Repair Leg
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			LockSuspension
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Suspension
+				guiName = Lock Suspension
+				category = Lock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+			UnLockSuspension
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = UnLock Suspension
+				guiName = UnLock Suspension
+				category = UnLock Suspension
+				guiActiveUnfocused = True
+				unfocusedRange = 4
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = Gear
+			}
+			ToggleSuspensionLockAction
+			{
+				actionGroup = None
+			}
+			RaiseAction
+			{
+				actionGroup = None
+			}
+			LowerAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = fuelTank3-2_4292289202
+	partName = Part
+	pos = 5.815742,10.02261,1.819004
 	attPos = 0,0,0
-	attPos0 = 0,-2.007995,0
+	attPos0 = 0,-3.882995,0
 	rot = 0,0,0,1
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 7
-	dstg = 7
+	istg = 9
+	dstg = 9
 	sidx = -1
 	sqor = -1
 	sepI = 3
@@ -2405,13 +4477,17 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = fuelTank2-2_4294702612
-	link = radialDecoupler2_4294628882
+	link = liquidEngine1-2_4292251700
 	link = radialDecoupler2_4294628450
-	link = radialDecoupler2_4294590044
-	link = radialDecoupler2_4294589826
-	attN = top,stackDecoupler_4294706104
-	attN = bottom,fuelTank2-2_4294702612
+	link = radialDecoupler2_4292248326
+	link = radialDecoupler_4292161668
+	link = radialDecoupler_4292160938
+	link = winglet3_4292037578
+	link = winglet3_4292037130
+	link = winglet3_4292037086
+	link = winglet3_4292037042
+	attN = top,stackDecoupler_4292264498
+	attN = bottom,liquidEngine1-2_4292251700
 	EVENTS
 	{
 	}
@@ -2424,8 +4500,8 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 1440
-		maxAmount = 1440
+		amount = 2880
+		maxAmount = 2880
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -2434,8 +4510,8 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 1760
-		maxAmount = 1760
+		amount = 3520
+		maxAmount = 3520
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -2444,76 +4520,18 @@ PART
 }
 PART
 {
-	part = fuelTank2-2_4294702612
+	part = liquidEngine1-2_4292251700
 	partName = Part
-	pos = 0,3.979579,0
+	pos = 5.815742,5.2073,1.819004
 	attPos = 0,0,0
-	attPos0 = 0,-2.8125,0
+	attPos0 = 0,-4.815309,0
 	rot = 0,0,0,1
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 7
-	dstg = 7
-	sidx = -1
-	sqor = -1
-	sepI = 3
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = engineLargeSkipper_4294698726
-	link = winglet3_4294584074
-	link = winglet3_4294583778
-	link = winglet3_4294583734
-	link = winglet3_4294583690
-	attN = top,fuelTank1-2_4294702942
-	attN = bottom,engineLargeSkipper_4294698726
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = LiquidFuel
-		amount = 720
-		maxAmount = 720
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxidizer
-		amount = 880
-		maxAmount = 880
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = engineLargeSkipper_4294698726
-	partName = Part
-	pos = 0,3.042079,0
-	attPos = 0,0,0
-	attPos0 = 0,-0.9375,0
-	rot = 0,0,0,1
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 7
-	dstg = 7
+	dstg = 9
 	sidx = 0
 	sqor = 7
 	sepI = 3
@@ -2521,7 +4539,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	attN = top,fuelTank2-2_4294702612
+	attN = top,fuelTank3-2_4292289202
 	EVENTS
 	{
 	}
@@ -2677,6 +4695,17 @@ PART
 	}
 	MODULE
 	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleTestSubject
 		isEnabled = True
 		EVENTS
@@ -2692,17 +4721,6 @@ PART
 				unfocusedRange = 2
 				externalToEVAOnly = True
 			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSurfaceFX
-		isEnabled = True
-		EVENTS
-		{
 		}
 		ACTIONS
 		{
@@ -2716,1006 +4734,6 @@ PART
 		flowState = True
 		isTweakable = False
 		hideFlow = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = winglet3_4294584074
-	partName = Part
-	pos = -1.301109,3.846489,1.117384
-	attPos = 0,0,0
-	attPos0 = -1.301109,-0.13309,1.117384
-	rot = 1.426976E-07,0.2588187,5.325557E-07,0.965926
-	attRot = 0,0,0,1
-	attRot0 = 1.426976E-07,0.2588187,5.325557E-07,0.965926
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 7
-	dstg = 7
-	sidx = -1
-	sqor = -1
-	sepI = 3
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = winglet3_4294583778
-	sym = winglet3_4294583734
-	sym = winglet3_4294583690
-	srfN = srfAttach,fuelTank2-2_4294702612
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		deploy_UIFlight
-		{
-			controlEnabled = True
-		}
-		deployInvert_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	part = winglet3_4294583778
-	partName = Part
-	pos = 1.117384,3.846489,1.301109
-	attPos = 0,0,0
-	attPos0 = 1.117384,-0.13309,1.301109
-	rot = 4.774761E-07,0.8660252,2.756713E-07,0.5000004
-	attRot = 0,0,0,1
-	attRot0 = 4.774762E-07,0.8660253,2.756713E-07,0.5000004
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 7
-	dstg = 7
-	sidx = -1
-	sqor = -1
-	sepI = 3
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = winglet3_4294584074
-	sym = winglet3_4294583734
-	sym = winglet3_4294583690
-	srfN = srfAttach,fuelTank2-2_4294702612
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		deploy_UIFlight
-		{
-			controlEnabled = True
-		}
-		deployInvert_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	part = winglet3_4294583734
-	partName = Part
-	pos = 1.301109,3.846489,-1.117384
-	attPos = 0,0,0
-	attPos0 = 1.301109,-0.13309,-1.117384
-	rot = 5.325557E-07,0.965926,-1.426977E-07,-0.2588187
-	attRot = 0,0,0,1
-	attRot0 = 5.325557E-07,0.965926,-1.426977E-07,-0.2588187
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 7
-	dstg = 7
-	sidx = -1
-	sqor = -1
-	sepI = 3
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = winglet3_4294584074
-	sym = winglet3_4294583778
-	sym = winglet3_4294583690
-	srfN = srfAttach,fuelTank2-2_4294702612
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		deploy_UIFlight
-		{
-			controlEnabled = True
-		}
-		deployInvert_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	part = winglet3_4294583690
-	partName = Part
-	pos = -1.117384,3.846489,-1.301109
-	attPos = 0,0,0
-	attPos0 = -1.117384,-0.13309,-1.301109
-	rot = 2.756713E-07,0.5000004,-4.774761E-07,-0.8660252
-	attRot = 0,0,0,1
-	attRot0 = 2.756713E-07,0.5000004,-4.774762E-07,-0.8660253
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 7
-	dstg = 7
-	sidx = -1
-	sqor = -1
-	sepI = 3
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = winglet3_4294584074
-	sym = winglet3_4294583778
-	sym = winglet3_4294583734
-	srfN = srfAttach,fuelTank2-2_4294702612
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleControlSurface
-		isEnabled = True
-		ignorePitch = False
-		ignoreYaw = False
-		ignoreRoll = False
-		deploy = False
-		deployInvert = False
-		ignorePitch_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreYaw_UIFlight
-		{
-			controlEnabled = True
-		}
-		ignoreRoll_UIFlight
-		{
-			controlEnabled = True
-		}
-		deploy_UIFlight
-		{
-			controlEnabled = True
-		}
-		deployInvert_UIFlight
-		{
-			controlEnabled = True
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ActionToggle
-			{
-				actionGroup = None
-			}
-			ActionExtend
-			{
-				actionGroup = None
-			}
-			ActionRetract
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	part = radialDecoupler2_4294628882
-	partName = Part
-	pos = 0.004920658,5.166325,-1.177411
-	attPos = 0,0,0
-	attPos0 = 0.004920658,-1.625754,-1.177411
-	rot = -7.797169E-07,0.7071068,7.797169E-07,-0.7071068
-	attRot = 0,0,0,1
-	attRot0 = -7.797169E-07,0.7071068,7.797169E-07,-0.7071068
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 5
-	dstg = 8
-	sidx = 0
-	sqor = 5
-	sepI = 5
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = fuelTank1-2_4294622998
-	sym = radialDecoupler2_4294628450
-	srfN = srfAttach,fuelTank1-2_4294702942
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnchoredDecoupler
-		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
-		ejectionForcePercent_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 1
-		}
-		EVENTS
-		{
-			Decouple
-			{
-				active = True
-				guiActive = True
-				guiIcon = Decouple
-				guiName = Decouple
-				category = Decouple
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		EVENTS
-		{
-			RunTestEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = fuelTank1-2_4294622998
-	partName = Part
-	pos = 0.06193278,4.92909,-3.044338
-	attPos = 0,0,0
-	attPos0 = -1.866926,-0.2372373,-0.05701179
-	rot = -1.011524E-06,0.7071068,1.011524E-06,-0.7071068
-	attRot = 0,0,0,1
-	attRot0 = 0,0,-3.278248E-07,1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 9
-	dstg = 9
-	sidx = -1
-	sqor = -1
-	sepI = 5
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = engineLargeSkipper_4294618274
-	link = fuelLine_4294614384
-	link = radialDecoupler_4294605130
-	link = fuelTank2-2_4293658880
-	sym = fuelTank1-2_4294622896
-	srfN = srfAttach,radialDecoupler2_4294628882
-	attN = top,fuelTank2-2_4293658880
-	attN = bottom,engineLargeSkipper_4294618274
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = LiquidFuel
-		amount = 1440
-		maxAmount = 1440
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxidizer
-		amount = 1760
-		maxAmount = 1760
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = engineLargeSkipper_4294618274
-	partName = Part
-	pos = 0.06193281,3.05409,-3.044343
-	attPos = 0,0,0
-	attPos0 = -3.203776E-07,-1.875,-1.490116E-08
-	rot = 0,0,0,1
-	attRot = 0,0,0,1
-	attRot0 = 1.011524E-06,-0.7071068,-1.011524E-06,-0.7071068
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 7
-	dstg = 9
-	sidx = 1
-	sqor = 7
-	sepI = 5
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = engineLargeSkipper_4294617926
-	attN = top,fuelTank1-2_4294622998
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEngines
-		isEnabled = True
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		thrustPercentage_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			Activate
-			{
-				active = True
-				guiActive = True
-				guiIcon = Activate Engine
-				guiName = Activate Engine
-				category = Activate Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Engine
-				guiName = Shutdown Engine
-				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleJettison
-		isEnabled = True
-		isJettisoned = True
-		EVENTS
-		{
-			Jettison
-			{
-				active = False
-				guiActive = True
-				guiIcon = Jettison
-				guiName = Jettison
-				category = Jettison
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			JettisonAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleGimbal
-		isEnabled = True
-		gimbalLock = False
-		gimbalLimiter = 100
-		gimbalLock_UIFlight
-		{
-			controlEnabled = True
-		}
-		gimbalLimiter_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 1
-		}
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-			LockAction
-			{
-				actionGroup = None
-			}
-			FreeAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateHeat
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAlternator
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		EVENTS
-		{
-			RunTestEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSurfaceFX
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 0
-		maxAmount = 0
-		flowState = True
-		isTweakable = False
-		hideFlow = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = fuelLine_4294614384
-	partName = CompoundPart
-	pos = 0.5194531,6.157033,-1.914289
-	attPos = 0,0,0
-	attPos0 = 1.130046,1.227945,-0.4575198
-	rot = 3.827582E-07,0.8660263,1.046895E-06,0.4999985
-	attRot = 0,0,0,1
-	attRot0 = 3.708492E-07,-0.9659253,-9.93697E-08,0.2588208
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 9
-	dstg = 9
-	sidx = -1
-	sqor = -1
-	sepI = 5
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = fuelLine_4294614878
-	srfN = srfAttach,fuelTank1-2_4294622998
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-		tgt = 4294702942
-		pos = -1.66438,0.09815541,-0.1996009
-		rot = 0,-0.7071069,-2.739563E-07,0.7071066
-		dir = -0.9911879,0.05845421,-0.1188685
-	}
-	MODULE
-	{
-		name = CModuleLinkedMesh
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = CModuleFuelLine
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = radialDecoupler_4294605130
-	partName = Part
-	pos = 0.06430511,5.088294,-4.261752
-	attPos = 0,0,0
-	attPos0 = -1.217408,0.1591986,-0.002372179
-	rot = -9.904504E-07,0.7071069,9.904506E-07,-0.7071068
-	attRot = 0,0,0,1
-	attRot0 = 0,-1.192093E-07,2.980221E-08,1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 6
-	dstg = 10
-	sidx = 0
-	sqor = 6
-	sepI = 6
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = solidBooster1-1_4294325560
-	sym = radialDecoupler_4294604990
-	srfN = srfAttach,fuelTank1-2_4294622998
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnchoredDecoupler
-		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
-		ejectionForcePercent_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 1
-		}
-		EVENTS
-		{
-			Decouple
-			{
-				active = True
-				guiActive = True
-				guiIcon = Decouple
-				guiName = Decouple
-				category = Decouple
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		EVENTS
-		{
-			RunTestEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = solidBooster1-1_4294325560
-	partName = Part
-	pos = 0.04000355,4.854108,-5.058057
-	attPos = 0,0,0
-	attPos0 = -0.7963102,-0.2341884,0.02430172
-	rot = 2.273737E-13,1,1.400709E-06,1.643127E-13
-	attRot = 0,0,0,1
-	attRot0 = -2.273737E-13,-0.7071068,-2.16697E-13,0.7071069
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 7
-	dstg = 11
-	sidx = 2
-	sqor = 7
-	sepI = 6
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = noseCone_4293655552
-	sym = solidBooster1-1_4294324754
-	srfN = srfAttach,radialDecoupler_4294605130
-	attN = top,noseCone_4293655552
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEngines
-		isEnabled = True
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		thrustPercentage_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			Activate
-			{
-				active = True
-				guiActive = True
-				guiIcon = Activate Engine
-				guiName = Activate Engine
-				category = Activate Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Engine
-				guiName = Shutdown Engine
-				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateHeat
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		EVENTS
-		{
-			RunTestEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSurfaceFX
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = SolidFuel
-		amount = 820
-		maxAmount = 820
-		flowState = True
-		isTweakable = True
-		hideFlow = False
 		flowMode = Both
 	}
 }
@@ -3723,26 +4741,26 @@ PART
 {
 	part = radialDecoupler2_4294628450
 	partName = Part
-	pos = -0.004920555,5.166325,1.177411
+	pos = 5.987504,9.130042,2.996412
 	attPos = 0,0,0
-	attPos0 = -0.004920555,-1.625754,1.177411
-	rot = 7.797168E-07,-0.7071068,7.797167E-07,-0.7071068
+	attPos0 = 0.1717625,-0.8925667,1.177408
+	rot = -1.264406E-07,0.7071068,-1.264406E-07,0.7071068
 	attRot = 0,0,0,1
-	attRot0 = 7.797169E-07,-0.7071069,7.797168E-07,-0.7071068
+	attRot0 = -1.264406E-07,0.7071068,-1.264406E-07,0.7071068
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 5
-	dstg = 8
-	sidx = 1
-	sqor = 5
-	sepI = 5
+	istg = 4
+	dstg = 10
+	sidx = 0
+	sqor = 4
+	sepI = 4
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
 	link = fuelTank1-2_4294622896
-	sym = radialDecoupler2_4294628882
-	srfN = srfAttach,fuelTank1-2_4294702942
+	sym = radialDecoupler2_4292248326
+	srfN = srfAttach,fuelTank3-2_4292289202
 	EVENTS
 	{
 	}
@@ -3814,19 +4832,19 @@ PART
 {
 	part = fuelTank1-2_4294622896
 	partName = Part
-	pos = -0.06193179,4.92909,3.044338
+	pos = 5.930493,8.892805,4.863338
 	attPos = 0,0,0
 	attPos0 = -1.866927,-0.2372373,-0.05701181
-	rot = 1.011524E-06,-0.7071068,1.011524E-06,-0.7071068
+	rot = -3.582477E-07,0.7071068,-3.582478E-07,0.7071068
 	attRot = 0,0,0,1
 	attRot0 = -5.684341E-14,-1.084202E-19,-3.278249E-07,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 9
-	dstg = 9
+	istg = 11
+	dstg = 11
 	sidx = -1
 	sqor = -1
-	sepI = 5
+	sepI = 4
 	attm = 1
 	modCost = 0
 	modMass = 0
@@ -3834,10 +4852,10 @@ PART
 	link = engineLargeSkipper_4294617926
 	link = fuelLine_4294614878
 	link = radialDecoupler_4294604990
-	link = fuelTank2-2_4293659266
-	sym = fuelTank1-2_4294622998
+	link = fuelTank1-2_4291737366
+	sym = fuelTank1-2_4292248274
 	srfN = srfAttach,radialDecoupler2_4294628450
-	attN = top,fuelTank2-2_4293659266
+	attN = top,fuelTank1-2_4291737366
 	attN = bottom,engineLargeSkipper_4294617926
 	EVENTS
 	{
@@ -3873,24 +4891,24 @@ PART
 {
 	part = engineLargeSkipper_4294617926
 	partName = Part
-	pos = -0.0619318,3.05409,3.044344
+	pos = 5.930493,7.017805,4.863341
 	attPos = 0,0,0
 	attPos0 = -4.395865E-07,-1.875,-1.490137E-08
-	rot = 1.705303E-13,1,-5.684342E-14,-1.192087E-07
+	rot = 1.776357E-13,-1,-9.238732E-07,1.192092E-07
 	attRot = 0,0,0,1
 	attRot0 = 1.011524E-06,-0.7071068,-1.011524E-06,-0.7071068
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 7
-	dstg = 9
-	sidx = 3
+	dstg = 11
+	sidx = 1
 	sqor = 7
-	sepI = 5
+	sepI = 4
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = engineLargeSkipper_4294618274
+	sym = engineLargeSkipper_4292248240
 	attN = top,fuelTank1-2_4294622896
 	EVENTS
 	{
@@ -4093,24 +5111,24 @@ PART
 {
 	part = fuelLine_4294614878
 	partName = CompoundPart
-	pos = -0.5194525,6.157033,1.914289
+	pos = 5.472972,10.12075,3.733292
 	attPos = 0,0,0
 	attPos0 = 1.130046,1.227945,-0.4575197
-	rot = 1.046895E-06,0.4999984,-3.827586E-07,-0.8660264
+	rot = -2.467976E-07,-0.4999984,-7.917595E-08,0.8660264
 	attRot = 0,0,0,1
 	attRot0 = 3.708492E-07,-0.9659253,-9.93695E-08,0.2588208
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 9
-	dstg = 9
+	istg = 11
+	dstg = 11
 	sidx = -1
 	sqor = -1
-	sepI = 5
+	sepI = 4
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = fuelLine_4294614384
+	sym = fuelLine_4292248082
 	srfN = srfAttach,fuelTank1-2_4294622896
 	EVENTS
 	{
@@ -4120,10 +5138,10 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4294702942
-		pos = -1.664395,0.09815446,-0.1996034
-		rot = 0,-0.7071084,-1.749098E-06,0.7071053
-		dir = -0.9911879,0.05845421,-0.1188685
+		tgt = 4292289202
+		pos = -1.029715,0.06073014,-0.1234885
+		rot = -3.52856E-15,-0.5000008,-1.061632E-07,0.8660251
+		dir = -0.9911878,0.05845788,-0.1188681
 	}
 	MODULE
 	{
@@ -4152,25 +5170,25 @@ PART
 {
 	part = radialDecoupler_4294604990
 	partName = Part
-	pos = -0.06430356,5.088294,4.261753
+	pos = 5.928122,9.052006,6.080762
 	attPos = 0,0,0
 	attPos0 = -1.217409,0.1591986,-0.002372198
-	rot = 9.904509E-07,-0.7071068,9.904503E-07,-0.7071068
+	rot = -3.371746E-07,0.7071068,-3.371742E-07,0.7071068
 	attRot = 0,0,0,1
 	attRot0 = 0,-1.192093E-07,2.980221E-08,1
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 6
-	dstg = 10
-	sidx = 1
+	dstg = 12
+	sidx = 0
 	sqor = 6
 	sepI = 6
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = solidBooster1-1_4294324754
-	sym = radialDecoupler_4294605130
+	link = solidBooster1-1_4291969000
+	sym = radialDecoupler_4292247992
 	srfN = srfAttach,fuelTank1-2_4294622896
 	EVENTS
 	{
@@ -4241,29 +5259,1473 @@ PART
 }
 PART
 {
-	part = solidBooster1-1_4294324754
+	part = radialDecoupler2_4292248326
 	partName = Part
-	pos = -0.04000173,4.854108,5.058064
+	pos = 5.64398,9.130042,0.6415956
 	attPos = 0,0,0
-	attPos0 = -0.7963107,-0.2341884,0.02430172
-	rot = 1.400709E-06,-1.192093E-07,-3.836931E-13,-1
+	attPos0 = -0.1717625,-0.8925667,-1.177408
+	rot = -1.264406E-07,0.7071068,1.264406E-07,-0.7071068
 	attRot = 0,0,0,1
-	attRot0 = -2.942134E-13,-0.7071068,-2.273737E-13,0.7071069
+	attRot0 = -1.264406E-07,0.7071068,1.264406E-07,-0.7071069
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 4
+	dstg = 10
+	sidx = 1
+	sqor = 4
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = fuelTank1-2_4292248274
+	sym = radialDecoupler2_4294628450
+	srfN = srfAttach,fuelTank3-2_4292289202
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		ejectionForcePercent_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292248274
+	partName = Part
+	pos = 5.700991,8.892805,-1.225332
+	attPos = 0,0,0
+	attPos0 = -1.866927,-0.2372373,-0.05701181
+	rot = -3.582477E-07,0.7071068,3.582477E-07,-0.7071068
+	attRot = 0,0,0,1
+	attRot0 = -5.684341E-14,-1.084202E-19,-3.278249E-07,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 11
+	dstg = 11
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = engineLargeSkipper_4292248240
+	link = fuelLine_4292248082
+	link = radialDecoupler_4292247992
+	link = fuelTank1-2_4291737946
+	sym = fuelTank1-2_4294622896
+	srfN = srfAttach,radialDecoupler2_4292248326
+	attN = top,fuelTank1-2_4291737946
+	attN = bottom,engineLargeSkipper_4292248240
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = engineLargeSkipper_4292248240
+	partName = Part
+	pos = 5.700991,7.017805,-1.225338
+	attPos = 0,0,0
+	attPos0 = -4.395865E-07,-1.875,-1.490137E-08
+	rot = -9.238728E-07,2.086163E-07,-2.273737E-13,1
+	attRot = 0,0,0,1
+	attRot0 = 1.011524E-06,-0.7071068,-1.011524E-06,-0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 7
+	dstg = 11
+	sidx = 2
+	sqor = 7
+	sepI = 4
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = engineLargeSkipper_4294617926
+	attN = top,fuelTank1-2_4292248274
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		isJettisoned = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		gimbalLimiter = 100
+		gimbalLock_UIFlight
+		{
+			controlEnabled = True
+		}
+		gimbalLimiter_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+			LockAction
+			{
+				actionGroup = None
+			}
+			FreeAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = fuelLine_4292248082
+	partName = CompoundPart
+	pos = 6.158512,10.12075,-0.09528506
+	attPos = 0,0,0
+	attPos0 = 1.130046,1.227945,-0.4575197
+	rot = -7.91759E-08,0.8660265,2.467976E-07,0.4999983
+	attRot = 0,0,0,1
+	attRot0 = 3.708492E-07,-0.9659253,-9.93695E-08,0.2588208
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 11
+	dstg = 11
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = fuelLine_4294614878
+	srfN = srfAttach,fuelTank1-2_4292248274
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4292289202
+		pos = -1.029718,0.06072824,-0.123488
+		rot = 8.308273E-15,-0.5000033,-4.637924E-07,0.8660237
+		dir = -0.991188,0.05845589,-0.1188673
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleFuelLine
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = radialDecoupler_4292247992
+	partName = Part
+	pos = 5.703363,9.052006,-2.442754
+	attPos = 0,0,0
+	attPos0 = -1.217409,0.1591986,-0.002372198
+	rot = -3.371742E-07,0.7071068,3.371746E-07,-0.7071068
+	attRot = 0,0,0,1
+	attRot0 = 0,-1.192093E-07,2.980221E-08,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 6
+	dstg = 12
+	sidx = 1
+	sqor = 6
+	sepI = 6
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = solidBooster1-1_4292247940
+	sym = radialDecoupler_4294604990
+	srfN = srfAttach,fuelTank1-2_4292248274
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		ejectionForcePercent_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = radialDecoupler_4292161668
+	partName = Part
+	pos = 4.598334,11.16386,1.805591
+	attPos = 0,0,0
+	attPos0 = -1.217408,1.141253,-0.01341212
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 5
+	dstg = 10
+	sidx = 0
+	sqor = 5
+	sepI = 5
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = MassiveBooster_4292157580
+	sym = radialDecoupler_4292160938
+	srfN = srfAttach,fuelTank3-2_4292289202
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		ejectionForcePercent_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = radialDecoupler_4292160938
+	partName = Part
+	pos = 7.03315,11.16386,1.832416
+	attPos = 0,0,0
+	attPos0 = 1.217408,1.141253,0.013412
+	rot = 0,1,0,-4.371139E-08
+	attRot = 0,0,0,1
+	attRot0 = 0,1,0,-4.371139E-08
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 5
+	dstg = 10
+	sidx = 1
+	sqor = 5
+	sepI = 5
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = MassiveBooster_4292156988
+	sym = radialDecoupler_4292161668
+	srfN = srfAttach,fuelTank3-2_4292289202
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		ejectionForcePercent = 100
+		isDecoupled = False
+		ejectionForcePercent_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 1
+		}
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+}
+PART
+{
+	part = MassiveBooster_4292157580
+	partName = Part
+	pos = 3.802025,10.97227,1.87498
+	attPos = 0,0,0
+	attPos0 = -0.7963097,-0.1915941,0.06938851
+	rot = 1.256074E-15,-0.7071068,1.256074E-15,0.7071068
+	attRot = 0,0,0,1
+	attRot0 = 1.256074E-15,-0.7071068,1.256074E-15,0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 7
+	dstg = 11
+	sidx = 3
+	sqor = 7
+	sepI = 5
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = noseCone_4292152980
+	sym = MassiveBooster_4292156988
+	srfN = srfAttach,radialDecoupler_4292161668
+	attN = top,noseCone_4292152980
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FlagDecal
+		isEnabled = True
+		flagDisplayed = True
+		EVENTS
+		{
+			ToggleFlag
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Toggle Flag
+				guiName = Toggle Flag
+				category = Toggle Flag
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 2600
+		maxAmount = 2600
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = MassiveBooster_4292156988
+	partName = Part
+	pos = 7.829459,10.97227,1.763027
+	attPos = 0,0,0
+	attPos0 = -0.7963095,-0.1915941,0.06938856
+	rot = 1.256074E-15,0.7071068,-1.256074E-15,0.7071068
+	attRot = 0,0,0,1
+	attRot0 = 1.256074E-15,-0.7071068,1.256074E-15,0.7071068
 	mir = 1,1,1
 	symMethod = Radial
 	istg = 7
 	dstg = 11
 	sidx = 4
 	sqor = 7
+	sepI = 5
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = noseCone_4292152826
+	sym = MassiveBooster_4292157580
+	srfN = srfAttach,radialDecoupler_4292160938
+	attN = top,noseCone_4292152826
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEnginesFX
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = FlagDecal
+		isEnabled = True
+		flagDisplayed = True
+		EVENTS
+		{
+			ToggleFlag
+			{
+				active = True
+				guiActive = False
+				guiActiveEditor = True
+				guiIcon = Toggle Flag
+				guiName = Toggle Flag
+				category = Toggle Flag
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 2600
+		maxAmount = 2600
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = noseCone_4292152980
+	partName = Part
+	pos = 3.802025,18.40143,1.87498
+	attPos = 0,0,0
+	attPos0 = 1.573186E-21,7.42916,-2.639368E-14
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = -1.256074E-15,0.7071068,-1.256074E-15,0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 11
+	dstg = 11
+	sidx = -1
+	sqor = -1
+	sepI = 5
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = noseCone_4292152826
+	attN = bottom01,MassiveBooster_4292157580
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = noseCone_4292152826
+	partName = Part
+	pos = 7.829459,18.40143,1.763027
+	attPos = 0,0,0
+	attPos0 = 1.573186E-21,7.42916,-2.639368E-14
+	rot = 0,1,0,-4.371139E-08
+	attRot = 0,0,0,1
+	attRot0 = -1.256074E-15,0.7071068,-1.256074E-15,0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 11
+	dstg = 11
+	sidx = -1
+	sqor = -1
+	sepI = 5
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = noseCone_4292152980
+	attN = bottom01,MassiveBooster_4292156988
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = winglet3_4292037578
+	partName = Part
+	pos = 4.698328,7.471113,3.120098
+	attPos = 0,0,0
+	attPos0 = -1.117414,-2.551497,1.301094
+	rot = -7.742893E-08,0.500001,-1.341105E-07,0.8660249
+	attRot = 0,0,0,1
+	attRot0 = -7.742893E-08,0.500001,-1.341105E-07,0.8660249
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 9
+	dstg = 9
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = winglet3_4292037130
+	sym = winglet3_4292037086
+	sym = winglet3_4292037042
+	srfN = srfAttach,fuelTank3-2_4292289202
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleControlSurface
+		isEnabled = True
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		deploy = False
+		deployInvert = False
+		ignorePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		ignoreYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		ignoreRoll_UIFlight
+		{
+			controlEnabled = True
+		}
+		deploy_UIFlight
+		{
+			controlEnabled = True
+		}
+		deployInvert_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = winglet3_4292037130
+	partName = Part
+	pos = 7.116836,7.471113,2.936418
+	attPos = 0,0,0
+	attPos0 = 1.301094,-2.551497,1.117414
+	rot = -1.49581E-07,0.9659261,-4.007994E-08,0.2588181
+	attRot = 0,0,0,1
+	attRot0 = -1.49581E-07,0.9659261,-4.007994E-08,0.2588181
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 9
+	dstg = 9
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = winglet3_4292037578
+	sym = winglet3_4292037086
+	sym = winglet3_4292037042
+	srfN = srfAttach,fuelTank3-2_4292289202
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleControlSurface
+		isEnabled = True
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		deploy = False
+		deployInvert = False
+		ignorePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		ignoreYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		ignoreRoll_UIFlight
+		{
+			controlEnabled = True
+		}
+		deploy_UIFlight
+		{
+			controlEnabled = True
+		}
+		deployInvert_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = winglet3_4292037086
+	partName = Part
+	pos = 6.933156,7.471113,0.5179105
+	attPos = 0,0,0
+	attPos0 = 1.117414,-2.551497,-1.301094
+	rot = -1.341105E-07,0.8660249,7.742893E-08,-0.500001
+	attRot = 0,0,0,1
+	attRot0 = -1.341105E-07,0.8660249,7.742893E-08,-0.500001
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 9
+	dstg = 9
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = winglet3_4292037578
+	sym = winglet3_4292037130
+	sym = winglet3_4292037042
+	srfN = srfAttach,fuelTank3-2_4292289202
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleControlSurface
+		isEnabled = True
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		deploy = False
+		deployInvert = False
+		ignorePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		ignoreYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		ignoreRoll_UIFlight
+		{
+			controlEnabled = True
+		}
+		deploy_UIFlight
+		{
+			controlEnabled = True
+		}
+		deployInvert_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = winglet3_4292037042
+	partName = Part
+	pos = 4.514648,7.471113,0.7015902
+	attPos = 0,0,0
+	attPos0 = -1.301094,-2.551497,-1.117414
+	rot = -4.007994E-08,0.2588181,1.49581E-07,-0.9659261
+	attRot = 0,0,0,1
+	attRot0 = -4.007994E-08,0.2588181,1.49581E-07,-0.9659261
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 9
+	dstg = 9
+	sidx = -1
+	sqor = -1
+	sepI = 3
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = winglet3_4292037578
+	sym = winglet3_4292037130
+	sym = winglet3_4292037086
+	srfN = srfAttach,fuelTank3-2_4292289202
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleControlSurface
+		isEnabled = True
+		ignorePitch = False
+		ignoreYaw = False
+		ignoreRoll = False
+		deploy = False
+		deployInvert = False
+		ignorePitch_UIFlight
+		{
+			controlEnabled = True
+		}
+		ignoreYaw_UIFlight
+		{
+			controlEnabled = True
+		}
+		ignoreRoll_UIFlight
+		{
+			controlEnabled = True
+		}
+		deploy_UIFlight
+		{
+			controlEnabled = True
+		}
+		deployInvert_UIFlight
+		{
+			controlEnabled = True
+		}
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ActionToggle
+			{
+				actionGroup = None
+			}
+			ActionExtend
+			{
+				actionGroup = None
+			}
+			ActionRetract
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = solidBooster1-1_4292247940
+	partName = Part
+	pos = 5.723882,7.895901,-3.239065
+	attPos = -5.960464E-08,-0.769168,0
+	attPos0 = -0.7963099,-0.3869379,-0.02051869
+	rot = 3.410605E-13,1,5.36442E-07,3.197441E-14
+	attRot = 0,0,0,1
+	attRot0 = -4.214715E-08,-0.7071068,-4.214717E-08,0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 7
+	dstg = 13
+	sidx = 5
+	sqor = 7
 	sepI = 6
 	attm = 1
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = noseCone_4293655764
-	sym = solidBooster1-1_4294325560
-	srfN = srfAttach,radialDecoupler_4294604990
-	attN = top,noseCone_4293655764
+	link = noseCone_4292247864
+	sym = solidBooster1-1_4291969000
+	srfN = srfAttach,radialDecoupler_4292247992
+	attN = top,noseCone_4292247864
 	EVENTS
 	{
 	}
@@ -4389,1726 +6851,297 @@ PART
 }
 PART
 {
-	part = radialDecoupler2_4294590044
+	part = noseCone_4292247864
 	partName = Part
-	pos = -1.177407,5.076123,-0.05596314
+	pos = 5.723882,11.8159,-3.239064
 	attPos = 0,0,0
-	attPos0 = -1.177407,-1.715956,-0.05596314
-	rot = 0,0,0,1
+	attPos0 = -7.449712E-09,3.92,4.768406E-07
+	rot = 7.105427E-15,-1,8.642695E-07,-1.192092E-07
 	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
+	attRot0 = -1.400709E-06,1.192093E-07,3.83693E-13,-1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 4
-	dstg = 8
-	sidx = 0
-	sqor = 4
-	sepI = 4
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = MassiveBooster_4294587054
-	sym = radialDecoupler2_4294589826
-	srfN = srfAttach,fuelTank1-2_4294702942
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnchoredDecoupler
-		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
-		ejectionForcePercent_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 1
-		}
-		EVENTS
-		{
-			Decouple
-			{
-				active = True
-				guiActive = True
-				guiIcon = Decouple
-				guiName = Decouple
-				category = Decouple
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		EVENTS
-		{
-			RunTestEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = MassiveBooster_4294587054
-	partName = Part
-	pos = -2.429333,4.827456,-0.09901278
-	attPos = 0,0,0
-	attPos0 = -1.251926,-0.2486668,-0.04304964
-	rot = -8.429368E-08,-0.7071068,-8.429368E-08,0.7071068
-	attRot = 0,0,0,1
-	attRot0 = -8.429368E-08,-0.7071068,-8.429368E-08,0.7071068
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 7
-	dstg = 9
-	sidx = 5
-	sqor = 7
-	sepI = 4
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = noseCone_4293654926
-	sym = MassiveBooster_4294586710
-	srfN = srfAttach,radialDecoupler2_4294590044
-	attN = top,noseCone_4293654926
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		thrustPercentage_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			Activate
-			{
-				active = True
-				guiActive = True
-				guiIcon = Activate Engine
-				guiName = Activate Engine
-				category = Activate Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Engine
-				guiName = Shutdown Engine
-				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateHeat
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FlagDecal
-		isEnabled = True
-		flagDisplayed = True
-		EVENTS
-		{
-			ToggleFlag
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Toggle Flag
-				guiName = Toggle Flag
-				category = Toggle Flag
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		EVENTS
-		{
-			RunTestEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSurfaceFX
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = SolidFuel
-		amount = 2600
-		maxAmount = 2600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = radialDecoupler2_4294589826
-	partName = Part
-	pos = 1.177407,5.076123,0.05596303
-	attPos = 0,0,0
-	attPos0 = 1.177407,-1.715956,0.05596303
-	rot = 0,1,0,-4.371139E-08
-	attRot = 0,0,0,1
-	attRot0 = 0,1,0,-4.371139E-08
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 4
-	dstg = 8
-	sidx = 1
-	sqor = 4
-	sepI = 4
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = MassiveBooster_4294586710
-	sym = radialDecoupler2_4294590044
-	srfN = srfAttach,fuelTank1-2_4294702942
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleAnchoredDecoupler
-		isEnabled = True
-		ejectionForcePercent = 100
-		isDecoupled = False
-		ejectionForcePercent_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 1
-		}
-		EVENTS
-		{
-			Decouple
-			{
-				active = True
-				guiActive = True
-				guiIcon = Decouple
-				guiName = Decouple
-				category = Decouple
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DecoupleAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		EVENTS
-		{
-			RunTestEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = MassiveBooster_4294586710
-	partName = Part
-	pos = 2.429333,4.827456,0.09901257
-	attPos = 0,0,0
-	attPos0 = -1.251926,-0.2486668,-0.04304964
-	rot = -8.429366E-08,0.7071068,8.429368E-08,0.7071068
-	attRot = 0,0,0,1
-	attRot0 = -8.429368E-08,-0.7071068,-8.429368E-08,0.7071068
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 7
-	dstg = 9
-	sidx = 6
-	sqor = 7
-	sepI = 4
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = noseCone_4293654620
-	sym = MassiveBooster_4294587054
-	srfN = srfAttach,radialDecoupler2_4294589826
-	attN = top,noseCone_4293654620
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleEnginesFX
-		isEnabled = True
-		staged = False
-		flameout = False
-		EngineIgnited = False
-		engineShutdown = False
-		currentThrottle = 0
-		thrustPercentage = 100
-		manuallyOverridden = False
-		thrustPercentage_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 100
-			stepIncrement = 0.5
-		}
-		EVENTS
-		{
-			Activate
-			{
-				active = True
-				guiActive = True
-				guiIcon = Activate Engine
-				guiName = Activate Engine
-				category = Activate Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			Shutdown
-			{
-				active = False
-				guiActive = True
-				guiIcon = Shutdown Engine
-				guiName = Shutdown Engine
-				category = Shutdown Engine
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			OnAction
-			{
-				actionGroup = None
-			}
-			ShutdownAction
-			{
-				actionGroup = None
-			}
-			ActivateAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateHeat
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = FlagDecal
-		isEnabled = True
-		flagDisplayed = True
-		EVENTS
-		{
-			ToggleFlag
-			{
-				active = True
-				guiActive = False
-				guiActiveEditor = True
-				guiIcon = Toggle Flag
-				guiName = Toggle Flag
-				category = Toggle Flag
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		EVENTS
-		{
-			RunTestEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleSurfaceFX
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = SolidFuel
-		amount = 2600
-		maxAmount = 2600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = telescopicLadder_4294546446
-	partName = Part
-	pos = -0.004181238,12.05451,-1.207406
-	attPos = 0,0,0
-	attPos0 = -0.004181238,0.7895107,-1.207406
-	rot = -7.797169E-07,0.7071068,7.797169E-07,-0.7071068
-	attRot = 0,0,0,1
-	attRot0 = -7.797169E-07,0.7071068,7.797169E-07,-0.7071068
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 5
-	dstg = 5
+	istg = 13
+	dstg = 13
 	sidx = -1
 	sqor = -1
-	sepI = 1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,fuelTank2-2_4294556408
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = RetractableLadder
-		isEnabled = True
-		StateName = Retracted
-		EVENTS
-		{
-			Extend
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Extend Ladder
-				guiName = Extend Ladder
-				category = Extend Ladder
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-			Retract
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Retract Ladder
-				guiName = Retract Ladder
-				category = Retract Ladder
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-			ExtendAction
-			{
-				actionGroup = None
-			}
-			RetractAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	part = telescopicLadder_4294545722
-	partName = Part
-	pos = 0.0214264,10.57226,-1.207409
-	attPos = 0,0,0
-	attPos0 = 0.0214264,-0.6927414,-1.207409
-	rot = -7.797169E-07,0.7071068,7.797169E-07,-0.7071068
-	attRot = 0,0,0,1
-	attRot0 = -7.797169E-07,0.7071068,7.797169E-07,-0.7071068
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 5
-	dstg = 5
-	sidx = -1
-	sqor = -1
-	sepI = 1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	srfN = srfAttach,fuelTank2-2_4294556408
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = RetractableLadder
-		isEnabled = True
-		StateName = Retracted
-		EVENTS
-		{
-			Extend
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Extend Ladder
-				guiName = Extend Ladder
-				category = Extend Ladder
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-			Retract
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Retract Ladder
-				guiName = Retract Ladder
-				category = Retract Ladder
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-			ExtendAction
-			{
-				actionGroup = None
-			}
-			RetractAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	part = parachuteRadial_4294005814
-	partName = Part
-	pos = 0.4195404,15.21599,0.01096813
-	attPos = 0,0,0
-	attPos0 = 0.4195404,0.2159939,0.01096813
-	rot = -0.1287089,0.6952941,-0.1287089,-0.6952944
-	attRot = 0,0,0,1
-	attRot0 = -0.1287089,0.6952941,-0.1287089,-0.6952944
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = 0
-	sqor = 0
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = parachuteRadial_4294004454
-	srfN = srfAttach,mk1pod_4294744014
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleParachute
-		isEnabled = True
-		persistentState = STOWED
-		minAirPressureToOpen = 0.04
-		deployAltitude = 1000
-		minAirPressureToOpen_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0.01
-			maxValue = 0.75
-			stepIncrement = 0.01
-		}
-		deployAltitude_UIFlight
-		{
-			controlEnabled = True
-			minValue = 50
-			maxValue = 5000
-			stepIncrement = 50
-		}
-		EVENTS
-		{
-			Deploy
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy Chute
-				guiName = Deploy Chute
-				category = Deploy Chute
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-			CutParachute
-			{
-				active = True
-				guiActive = True
-				guiIcon = Cut Parachute
-				guiName = Cut Parachute
-				category = Cut Parachute
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-			Repack
-			{
-				active = False
-				guiActive = False
-				guiIcon = Repack Chute
-				guiName = Repack Chute
-				category = Repack Chute
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			CutAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		EVENTS
-		{
-			RunTestEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = parachuteRadial_4294004454
-	partName = Part
-	pos = -0.4195404,15.21599,-0.0109681
-	attPos = 0,0,0
-	attPos0 = -0.4195404,0.2159939,-0.0109681
-	rot = -0.1287089,-0.6952944,0.1287089,-0.695294
-	attRot = 0,0,0,1
-	attRot0 = -0.1287089,-0.6952944,0.1287089,-0.695294
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = 1
-	sqor = 0
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = parachuteRadial_4294005814
-	srfN = srfAttach,mk1pod_4294744014
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleParachute
-		isEnabled = True
-		persistentState = STOWED
-		minAirPressureToOpen = 0.04
-		deployAltitude = 1000
-		minAirPressureToOpen_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0.01
-			maxValue = 0.75
-			stepIncrement = 0.01
-		}
-		deployAltitude_UIFlight
-		{
-			controlEnabled = True
-			minValue = 50
-			maxValue = 5000
-			stepIncrement = 50
-		}
-		EVENTS
-		{
-			Deploy
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy Chute
-				guiName = Deploy Chute
-				category = Deploy Chute
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-			CutParachute
-			{
-				active = True
-				guiActive = True
-				guiIcon = Cut Parachute
-				guiName = Cut Parachute
-				category = Cut Parachute
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-			Repack
-			{
-				active = False
-				guiActive = False
-				guiIcon = Repack Chute
-				guiName = Repack Chute
-				category = Repack Chute
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			CutAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		EVENTS
-		{
-			RunTestEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = parachuteRadial_4294003740
-	partName = Part
-	pos = 0.4808349,14.0087,0.002620206
-	attPos = 0,0,0
-	attPos0 = 0.4808349,0.05610847,0.002620206
-	rot = -0.1287089,0.6952941,-0.1287089,-0.6952944
-	attRot = 0,0,0,1
-	attRot0 = -0.1287089,0.6952941,-0.1287089,-0.6952944
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = 2
-	sqor = 0
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = parachuteRadial_4294003518
-	srfN = srfAttach,mk1pod_4294743476
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleParachute
-		isEnabled = True
-		persistentState = STOWED
-		minAirPressureToOpen = 0.04
-		deployAltitude = 1000
-		minAirPressureToOpen_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0.01
-			maxValue = 0.75
-			stepIncrement = 0.01
-		}
-		deployAltitude_UIFlight
-		{
-			controlEnabled = True
-			minValue = 50
-			maxValue = 5000
-			stepIncrement = 50
-		}
-		EVENTS
-		{
-			Deploy
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy Chute
-				guiName = Deploy Chute
-				category = Deploy Chute
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-			CutParachute
-			{
-				active = True
-				guiActive = True
-				guiIcon = Cut Parachute
-				guiName = Cut Parachute
-				category = Cut Parachute
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-			Repack
-			{
-				active = False
-				guiActive = False
-				guiIcon = Repack Chute
-				guiName = Repack Chute
-				category = Repack Chute
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			CutAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		EVENTS
-		{
-			RunTestEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = parachuteRadial_4294003518
-	partName = Part
-	pos = -0.4808349,14.0087,-0.002620164
-	attPos = 0,0,0
-	attPos0 = -0.4808349,0.05610847,-0.002620164
-	rot = -0.1287089,-0.6952944,0.1287089,-0.695294
-	attRot = 0,0,0,1
-	attRot0 = -0.1287089,-0.6952944,0.1287089,-0.695294
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 0
-	dstg = 0
-	sidx = 3
-	sqor = 0
-	sepI = 0
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = parachuteRadial_4294003740
-	srfN = srfAttach,mk1pod_4294743476
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleParachute
-		isEnabled = True
-		persistentState = STOWED
-		minAirPressureToOpen = 0.04
-		deployAltitude = 1000
-		minAirPressureToOpen_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0.01
-			maxValue = 0.75
-			stepIncrement = 0.01
-		}
-		deployAltitude_UIFlight
-		{
-			controlEnabled = True
-			minValue = 50
-			maxValue = 5000
-			stepIncrement = 50
-		}
-		EVENTS
-		{
-			Deploy
-			{
-				active = True
-				guiActive = True
-				guiIcon = Deploy Chute
-				guiName = Deploy Chute
-				category = Deploy Chute
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-			CutParachute
-			{
-				active = True
-				guiActive = True
-				guiIcon = Cut Parachute
-				guiName = Cut Parachute
-				category = Cut Parachute
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-			Repack
-			{
-				active = False
-				guiActive = False
-				guiIcon = Repack Chute
-				guiName = Repack Chute
-				category = Repack Chute
-				guiActiveUnfocused = True
-				unfocusedRange = 4
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			DeployAction
-			{
-				actionGroup = None
-			}
-			CutAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-	MODULE
-	{
-		name = ModuleTestSubject
-		isEnabled = True
-		EVENTS
-		{
-			RunTestEvent
-			{
-				active = False
-				guiActive = True
-				guiIcon = Run Test
-				guiName = Run Test
-				category = Run Test
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDragModifier
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-}
-PART
-{
-	part = spotLight2_4293983030
-	partName = Part
-	pos = 0.02858504,10.7764,1.476657
-	attPos = 0,0,0
-	attPos0 = 0.02858504,-0.4886065,1.476657
-	rot = 0,1,1.043081E-06,0
-	attRot = 0,0,0,1
-	attRot0 = 0,1,1.043081E-06,0
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 5
-	dstg = 5
-	sidx = -1
-	sqor = -1
-	sepI = 1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = spotLight2_4293981456
-	sym = spotLight2_4293981420
-	sym = spotLight2_4293981384
-	srfN = srfAttach,fuelTank2-2_4294556408
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleLight
-		isEnabled = True
-		isOn = False
-		lightR = 1
-		lightG = 1
-		lightB = 1
-		lightR_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightG_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightB_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		EVENTS
-		{
-			LightsOff
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights Off
-				guiName = Lights Off
-				category = Lights Off
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			LightsOn
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights On
-				guiName = Lights On
-				category = Lights On
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleLightAction
-			{
-				actionGroup = Light
-			}
-			LightOnAction
-			{
-				actionGroup = None
-			}
-			LightOffAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	part = spotLight2_4293981456
-	partName = Part
-	pos = 1.476657,10.7764,-0.02858495
-	attPos = 0,0,0
-	attPos0 = 1.476657,-0.4886065,-0.02858495
-	rot = 7.375699E-07,0.7071068,7.375699E-07,-0.7071068
-	attRot = 0,0,0,1
-	attRot0 = 7.375699E-07,0.7071068,7.375699E-07,-0.7071068
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 5
-	dstg = 5
-	sidx = -1
-	sqor = -1
-	sepI = 1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = spotLight2_4293983030
-	sym = spotLight2_4293981420
-	sym = spotLight2_4293981384
-	srfN = srfAttach,fuelTank2-2_4294556408
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleLight
-		isEnabled = True
-		isOn = False
-		lightR = 1
-		lightG = 1
-		lightB = 1
-		lightR_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightG_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightB_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		EVENTS
-		{
-			LightsOff
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights Off
-				guiName = Lights Off
-				category = Lights Off
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			LightsOn
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights On
-				guiName = Lights On
-				category = Lights On
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleLightAction
-			{
-				actionGroup = Light
-			}
-			LightOnAction
-			{
-				actionGroup = None
-			}
-			LightOffAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	part = spotLight2_4293981420
-	partName = Part
-	pos = -0.02858517,10.7764,-1.476657
-	attPos = 0,0,0
-	attPos0 = -0.02858517,-0.4886065,-1.476657
-	rot = 1.043081E-06,-4.371139E-08,-4.559453E-14,-1
-	attRot = 0,0,0,1
-	attRot0 = 1.043081E-06,-4.371139E-08,-4.559453E-14,-1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 5
-	dstg = 5
-	sidx = -1
-	sqor = -1
-	sepI = 1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = spotLight2_4293983030
-	sym = spotLight2_4293981456
-	sym = spotLight2_4293981384
-	srfN = srfAttach,fuelTank2-2_4294556408
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleLight
-		isEnabled = True
-		isOn = False
-		lightR = 1
-		lightG = 1
-		lightB = 1
-		lightR_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightG_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightB_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		EVENTS
-		{
-			LightsOff
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights Off
-				guiName = Lights Off
-				category = Lights Off
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			LightsOn
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights On
-				guiName = Lights On
-				category = Lights On
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleLightAction
-			{
-				actionGroup = Light
-			}
-			LightOnAction
-			{
-				actionGroup = None
-			}
-			LightOffAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	part = spotLight2_4293981384
-	partName = Part
-	pos = -1.476657,10.7764,0.02858512
-	attPos = 0,0,0
-	attPos0 = -1.476657,-0.4886065,0.02858512
-	rot = 7.375699E-07,-0.7071068,-7.375699E-07,-0.7071068
-	attRot = 0,0,0,1
-	attRot0 = 7.375699E-07,-0.7071068,-7.375699E-07,-0.7071068
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 5
-	dstg = 5
-	sidx = -1
-	sqor = -1
-	sepI = 1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = spotLight2_4293983030
-	sym = spotLight2_4293981456
-	sym = spotLight2_4293981420
-	srfN = srfAttach,fuelTank2-2_4294556408
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = ModuleLight
-		isEnabled = True
-		isOn = False
-		lightR = 1
-		lightG = 1
-		lightB = 1
-		lightR_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightG_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		lightB_UIFlight
-		{
-			controlEnabled = True
-			minValue = 0
-			maxValue = 1
-			stepIncrement = 0.05
-		}
-		EVENTS
-		{
-			LightsOff
-			{
-				active = False
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights Off
-				guiName = Lights Off
-				category = Lights Off
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-			LightsOn
-			{
-				active = True
-				guiActive = True
-				guiActiveEditor = True
-				guiIcon = Lights On
-				guiName = Lights On
-				category = Lights On
-				guiActiveUnfocused = False
-				unfocusedRange = 2
-				externalToEVAOnly = True
-			}
-		}
-		ACTIONS
-		{
-			ToggleLightAction
-			{
-				actionGroup = Light
-			}
-			LightOnAction
-			{
-				actionGroup = None
-			}
-			LightOffAction
-			{
-				actionGroup = None
-			}
-		}
-	}
-}
-PART
-{
-	part = fuelTank2-2_4293659266
-	partName = Part
-	pos = -0.0619318,7.74159,3.044334
-	attPos = 0,0,0
-	attPos0 = -3.274527E-06,2.8125,-1.490148E-08
-	rot = -1.705303E-13,0,-5.684342E-14,1
-	attRot = 0,0,0,1
-	attRot0 = -1.011524E-06,0.7071068,-1.011524E-06,-0.7071068
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 9
-	dstg = 9
-	sidx = -1
-	sqor = -1
-	sepI = 5
+	sepI = 6
 	attm = 0
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	link = rocketNoseCone_4293656654
-	sym = fuelTank2-2_4293658880
-	attN = top,rocketNoseCone_4293656654
+	sym = noseCone_4291968924
+	attN = bottom01,solidBooster1-1_4292247940
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = solidBooster1-1_4291969000
+	partName = Part
+	pos = 5.907603,7.895901,6.877075
+	attPos = -1.490116E-06,-0.769168,0
+	attPos0 = -0.7963107,-0.3869379,-0.02051887
+	rot = -5.36442E-07,5.759824E-20,2.984279E-13,1
+	attRot = 0,0,0,1
+	attRot0 = -4.214717E-08,-0.7071068,-4.214718E-08,0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 7
+	dstg = 13
+	sidx = 6
+	sqor = 7
+	sepI = 6
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = noseCone_4291968924
+	sym = solidBooster1-1_4292247940
+	srfN = srfAttach,radialDecoupler_4294604990
+	attN = top,noseCone_4291968924
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleTestSubject
+		isEnabled = True
+		EVENTS
+		{
+			RunTestEvent
+			{
+				active = False
+				guiActive = True
+				guiIcon = Run Test
+				guiName = Run Test
+				category = Run Test
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleSurfaceFX
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = SolidFuel
+		amount = 820
+		maxAmount = 820
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = noseCone_4291968924
+	partName = Part
+	pos = 5.907603,11.8159,6.877075
+	attPos = 0,0,0
+	attPos0 = -7.449712E-09,3.92,4.768406E-07
+	rot = -8.642692E-07,1.192093E-07,-2.842171E-13,-1
+	attRot = 0,0,0,1
+	attRot0 = -1.400709E-06,1.192093E-07,3.83693E-13,-1
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 13
+	dstg = 13
+	sidx = -1
+	sqor = -1
+	sepI = 6
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	sym = noseCone_4292247864
+	attN = bottom01,solidBooster1-1_4291969000
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+}
+PART
+{
+	part = fuelTank1-2_4291737946
+	partName = Part
+	pos = 5.700991,12.64281,-1.225331
+	attPos = 0,0,0
+	attPos0 = -2.458686E-06,3.75,0
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	attRot0 = 3.582477E-07,-0.7071068,-3.582477E-07,-0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 11
+	dstg = 11
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = rocketNoseCone_4291731424
+	sym = fuelTank1-2_4291737366
+	attN = top,rocketNoseCone_4291731424
+	attN = bottom,fuelTank1-2_4292248274
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = fuelTank1-2_4291737366
+	partName = Part
+	pos = 5.930493,12.64281,4.863337
+	attPos = 0,0,0
+	attPos0 = -2.339477E-06,3.75,-4.263256E-13
+	rot = -5.684342E-14,-1,4.973799E-14,-1.598723E-14
+	attRot = 0,0,0,1
+	attRot0 = 3.582477E-07,-0.7071068,-3.582477E-07,-0.7071068
+	mir = 1,1,1
+	symMethod = Radial
+	istg = 11
+	dstg = 11
+	sidx = -1
+	sqor = -1
+	sepI = 4
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = (0.0, 0.0, 0.0)
+	link = rocketNoseCone_4291731252
+	sym = fuelTank1-2_4291737946
+	attN = top,rocketNoseCone_4291731252
 	attN = bottom,fuelTank1-2_4294622896
 	EVENTS
 	{
@@ -6122,8 +7155,8 @@ PART
 	RESOURCE
 	{
 		name = LiquidFuel
-		amount = 720
-		maxAmount = 720
+		amount = 1440
+		maxAmount = 1440
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -6132,8 +7165,8 @@ PART
 	RESOURCE
 	{
 		name = Oxidizer
-		amount = 880
-		maxAmount = 880
+		amount = 1760
+		maxAmount = 1760
 		flowState = True
 		isTweakable = True
 		hideFlow = False
@@ -6142,205 +7175,18 @@ PART
 }
 PART
 {
-	part = fuelTank2-2_4293658880
+	part = rocketNoseCone_4291731424
 	partName = Part
-	pos = 0.06193279,7.74159,-3.044334
+	pos = 5.700991,14.51781,-1.225332
 	attPos = 0,0,0
-	attPos0 = -3.274526E-06,2.8125,-1.490116E-08
-	rot = 1.136868E-13,-1,-1.136868E-13,6.079583E-13
-	attRot = 0,0,0,1
-	attRot0 = -1.011524E-06,0.7071068,-1.011524E-06,-0.7071068
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 9
-	dstg = 9
-	sidx = -1
-	sqor = -1
-	sepI = 5
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	link = rocketNoseCone_4293656422
-	sym = fuelTank2-2_4293659266
-	attN = top,rocketNoseCone_4293656422
-	attN = bottom,fuelTank1-2_4294622998
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	RESOURCE
-	{
-		name = LiquidFuel
-		amount = 720
-		maxAmount = 720
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Oxidizer
-		amount = 880
-		maxAmount = 880
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		flowMode = Both
-	}
-}
-PART
-{
-	part = rocketNoseCone_4293656654
-	partName = Part
-	pos = -0.06193181,8.67909,3.044334
-	attPos = 0,0,0
-	attPos0 = -1.4901E-08,0.9375,4.35859E-07
-	rot = 5.684342E-14,-5.421011E-20,-5.684342E-14,1
-	attRot = 0,0,0,1
-	attRot0 = 1.705302E-13,0,5.684341E-14,1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 9
-	dstg = 9
-	sidx = -1
-	sqor = -1
-	sepI = 5
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = rocketNoseCone_4293656422
-	attN = bottom,fuelTank2-2_4293659266
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-}
-PART
-{
-	part = rocketNoseCone_4293656422
-	partName = Part
-	pos = 0.06193281,8.67909,-3.044334
-	attPos = 0,0,0
-	attPos0 = -1.49009E-08,0.9375,4.358585E-07
-	rot = 1.136868E-13,-1,5.684342E-14,6.079584E-13
-	attRot = 0,0,0,1
-	attRot0 = 1.705302E-13,-5.421009E-20,5.684341E-14,1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 9
-	dstg = 9
-	sidx = -1
-	sqor = -1
-	sepI = 5
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = rocketNoseCone_4293656654
-	attN = bottom,fuelTank2-2_4293658880
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-}
-PART
-{
-	part = noseCone_4293655764
-	partName = Part
-	pos = -0.04000174,8.774108,5.058053
-	attPos = 0,0,0
-	attPos0 = -7.449712E-09,3.92,4.768406E-07
-	rot = 5.684342E-14,-5.421011E-20,-5.684342E-14,1
-	attRot = 0,0,0,1
-	attRot0 = -1.400709E-06,1.192093E-07,3.83693E-13,-1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 11
-	dstg = 11
-	sidx = -1
-	sqor = -1
-	sepI = 6
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = noseCone_4293655552
-	attN = bottom01,solidBooster1-1_4294324754
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-}
-PART
-{
-	part = noseCone_4293655552
-	partName = Part
-	pos = 0.04000356,8.774108,-5.058047
-	attPos = 0,0,0
-	attPos0 = -1.117501E-08,3.92,4.768414E-07
-	rot = -5.684342E-14,-1,1.705303E-13,-1.192087E-07
-	attRot = 0,0,0,1
-	attRot0 = -1.400709E-06,1.192093E-07,3.836931E-13,-1
-	mir = 1,1,1
-	symMethod = Radial
-	istg = 11
-	dstg = 11
-	sidx = -1
-	sqor = -1
-	sepI = 6
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = (0.0, 0.0, 0.0)
-	sym = noseCone_4293655764
-	attN = bottom01,solidBooster1-1_4294325560
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-}
-PART
-{
-	part = noseCone_4293654926
-	partName = Part
-	pos = -2.429331,12.25661,-0.09901278
-	attPos = 0,0,0
-	attPos0 = -1.98952E-13,7.429159,1.023191E-07
+	attPos0 = 3.028685E-13,1.875,-6.407495E-07
 	rot = 0,0,0,1
 	attRot = 0,0,0,1
-	attRot0 = 8.429368E-08,0.7071068,8.429368E-08,0.7071068
+	attRot0 = 0,0,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 9
-	dstg = 9
+	istg = 11
+	dstg = 11
 	sidx = -1
 	sqor = -1
 	sepI = 4
@@ -6348,8 +7194,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = noseCone_4293654620
-	attN = bottom01,MassiveBooster_4294587054
+	sym = rocketNoseCone_4291731252
+	attN = bottom,fuelTank1-2_4291737946
 	EVENTS
 	{
 	}
@@ -6362,18 +7208,18 @@ PART
 }
 PART
 {
-	part = noseCone_4293654620
+	part = rocketNoseCone_4291731252
 	partName = Part
-	pos = 2.429331,12.25661,0.09901257
+	pos = 5.930493,14.51781,4.863338
 	attPos = 0,0,0
-	attPos0 = -3.857065E-13,7.429159,1.023188E-07
-	rot = 1.776357E-14,1,1.776357E-14,7.549789E-08
+	attPos0 = 5.018205E-13,1.875,-5.215406E-07
+	rot = -5.684342E-14,-1,4.973799E-14,-1.598723E-14
 	attRot = 0,0,0,1
-	attRot0 = 8.429368E-08,0.7071068,8.429369E-08,0.7071068
+	attRot0 = 3.388131E-21,-1.92593E-34,0,1
 	mir = 1,1,1
 	symMethod = Radial
-	istg = 9
-	dstg = 9
+	istg = 11
+	dstg = 11
 	sidx = -1
 	sqor = -1
 	sepI = 4
@@ -6381,8 +7227,8 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = (0.0, 0.0, 0.0)
-	sym = noseCone_4293654926
-	attN = bottom01,MassiveBooster_4294586710
+	sym = rocketNoseCone_4291731424
+	attN = bottom,fuelTank1-2_4291737366
 	EVENTS
 	{
 	}
